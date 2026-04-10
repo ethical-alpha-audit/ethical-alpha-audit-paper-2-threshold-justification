@@ -1,6 +1,6 @@
 # Beyond 'Magic Numbers': A Threshold Justification Stack for Clinical AI Governance
 
-[![DOI](https://zenodo.org/badge/DOI/PLACEHOLDER.svg)](https://doi.org/PLACEHOLDER)
+[![DOI](https://zenodo.org/badge/1194630564.svg)](https://doi.org/10.5281/zenodo.19499797)
 
 > **Paper 3** of the Ethical Alpha Audit research programme
 >
