@@ -1,0 +1,10 @@
+name: eaa-p3-tjs-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pandas
+  - jupyterlab
+  - notebook
+  - nbconvert
+  - pip

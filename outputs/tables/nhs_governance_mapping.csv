@@ -1,0 +1,7 @@
+TJS Layer,NHS Artefact,Governance Standard,Notes
+L1: Harm-Control Statement,Clinical hazard log,DCB0129; DCB0160,Maps to and extends the hazard identification function by requiring an explicit causal pathway from threshold value to harm
+L2: Context Key,Intended-use statement,DCB0129; DTAC transparency criterion,Maps to deployment context documentation already required
+L3: Calibration Evidence,Evidence Standards Framework Tier 3b requirements,NICE ESF,Maps to clinical evidence requirements for digital health technologies
+L4: Sensitivity Analysis,Clinical risk assessment,DCB0129,Extends the clinical risk assessment by documenting how governance outcomes change as threshold varies
+L5: Gaming Resistance,Independent assessment principle,MHRA Software and AI as a Medical Device guidance,Maps to the principle of independent validation embedded in MHRA guidance
+L6: Lifecycle Validity Rule,Post-market surveillance obligations; ongoing monitoring,MHRA guidance; DTAC clinical safety criterion,Maps to post-market surveillance and prespecifies conditions for threshold re-evaluation

@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-04-10T10:31:00.016635+00:00",
+  "files": [
+    {
+      "path": "outputs/tables/table1_failure_mechanisms.csv",
+      "sha256": "2fcd8b8b81dd3c7dd24a26afd97ab80c714d4c54eb0fccfe31b665e387b3f7e7",
+      "exists": true
+    },
+    {
+      "path": "outputs/tables/table2_tjs_specification.csv",
+      "sha256": "26eb586d0407e439b9843b634d7b3400f03fcd51c33768b19875570f8a28555e",
+      "exists": true
+    },
+    {
+      "path": "outputs/tables/table3_framework_comparison.csv",
+      "sha256": "e145d3037a4a2b753309dd5611000e5b68bf8db7d88280a690f4a3f5fa762a2b",
+      "exists": true
+    },
+    {
+      "path": "outputs/tables/glossary.csv",
+      "sha256": "255618298667dc8dfc2182a9f68c56f4be75404cb5a2499011f7a9539890cbd1",
+      "exists": true
+    },
+    {
+      "path": "outputs/tables/nhs_governance_mapping.csv",
+      "sha256": "8dcecda0eecceaebabb3845b6a1c6a757653924d561c77a1e8551888d8fe5ec1",
+      "exists": true
+    },
+    {
+      "path": "outputs/tables/gaming_resistance_pathways.csv",
+      "sha256": "6c0dd8ab3383d60e9fe520d513558847c4168ae625cb8c3d2c92ff4de7419402",
+      "exists": true
+    },
+    {
+      "path": "outputs/schemas/tjs_record_primary_safety_rendered.json",
+      "sha256": "cfb63d320ca6ce44de1eda4f17852568196fbc0b1be576a55eec7762063bb830",
+      "exists": true
+    },
+    {
+      "path": "outputs/schemas/tjs_record_secondary_operational_rendered.json",
+      "sha256": "6974390e621fcc237df6fb2fdc46845d2e19cf3560d51ce0d4037d47c06d0652",
+      "exists": true
+    }
+  ]
+}

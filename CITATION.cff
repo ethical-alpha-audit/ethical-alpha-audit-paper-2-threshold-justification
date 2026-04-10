@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: "Paper 3: Beyond 'Magic Numbers' — A Threshold Justification Stack for Clinical AI Governance"
+version: "1.0.0"
+doi: "PLACEHOLDER"
+message: "If you use this repository, please cite the accompanying BMJ Health & Care Informatics paper."
+type: software
+authors:
+  - family-names: Brown
+    given-names: Walter
+    orcid: "https://orcid.org/0000-0002-6050-8522"
+    affiliation: "Ethical Alpha Audit"
+repository-code: "https://github.com/ethical-alpha-audit/ethical-alpha-audit-paper-3-threshold-justification"
+license: MIT
+date-released: "REPLACE_WITH_RELEASE_DATE"
+keywords:
+  - AI governance
+  - threshold justification
+  - clinical AI
+  - TJS
+  - algorithmic auditing
+  - patient safety
+  - reproducibility

@@ -1,0 +1,27 @@
+{
+  "_provenance": "Supplementary Appendix F: Gaming Resistance Pathways and Assessment.",
+  "table_title": "Gaming Resistance (Layer 5): Concrete Exploitation Pathways",
+  "columns": ["pathway", "description", "applicability"],
+  "data": [
+    {
+      "pathway": "Cohort restriction",
+      "description": "A developer restricts the validation cohort to subpopulations where the system performs well.",
+      "applicability": "Primary Safety Thresholds"
+    },
+    {
+      "pathway": "Outcome labelling",
+      "description": "The choice of gold-standard outcome definition materially affects performance metrics.",
+      "applicability": "Primary Safety Thresholds"
+    },
+    {
+      "pathway": "Post-hoc threshold selection",
+      "description": "The governance threshold is selected after reviewing validation results rather than being pre-specified.",
+      "applicability": "Primary Safety Thresholds"
+    },
+    {
+      "pathway": "Auditor independence requirement",
+      "description": "For Primary Safety Thresholds, the party conducting the gaming resistance assessment should have no commercial interest in the outcome.",
+      "applicability": "Primary Safety Thresholds (additional requirement)"
+    }
+  ]
+}

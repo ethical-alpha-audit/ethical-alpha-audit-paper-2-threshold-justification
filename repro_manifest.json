@@ -1,0 +1,12 @@
+{
+  "repo_name": "ethical-alpha-audit-paper-3-threshold-justification",
+  "version": "1.0.0",
+  "paper": "Paper 3 \u2014 BMJ Health & Care Informatics: Beyond 'Magic Numbers'",
+  "manuscript_status": "pre-submission",
+  "environment_status": "pinned in requirements.txt and environment.lock",
+  "output_policy": "All deterministic artefacts generated into outputs/ and hash-locked in config/expected_outputs.json",
+  "validation_entry_point": "python reproduce_all.py",
+  "stm_targets": 27,
+  "stm_coverage": "27/27 non-excluded targets served; 6 companion-paper targets explicitly excluded",
+  "claim_boundary_note": "This repository renders manuscript content. It does not reproduce companion-paper computational results. See docs/claim_boundary_statement.md."
+}

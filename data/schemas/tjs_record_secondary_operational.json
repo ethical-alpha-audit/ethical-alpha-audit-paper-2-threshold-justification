@@ -1,0 +1,67 @@
+{
+  "_epistemic_status": "Illustrative proposed structure. This is NOT a validated standard, NOT an adopted specification, and NOT a normative requirement. It demonstrates how TJS-compliant threshold documentation might be encoded for a Secondary Operational threshold.",
+  "_provenance": "Constructed from manuscript Table 2 (TJS specification, tier requirements) and the abbreviated worked example referenced in Supplementary Appendix B.",
+  "record_type": "TJS Threshold Governance Record",
+  "tjs_version": "1.0.0-proposed",
+  "tier": "Secondary Operational",
+  "layers_required": 3,
+  "system": {
+    "name": "AI-driven clinical alert system",
+    "clinical_domain": "Hospital alert management",
+    "threshold_metric": "Alert volume cap",
+    "threshold_value": "Operational parameter",
+    "classification_rationale": "Failure does not directly cause irreversible patient harm; affects operational performance (alert fatigue, workflow disruption)"
+  },
+  "layers": {
+    "L1_harm_control_statement": {
+      "status": "recommended",
+      "content": {
+        "note": "Recommended but not required for Secondary Operational tier. If completed: alert volume exceeding threshold contributes to alert fatigue, which may indirectly affect response times."
+      }
+    },
+    "L2_context_key": {
+      "status": "required",
+      "content": {
+        "clinical_setting": "Hospital ward",
+        "patient_population": "General inpatients",
+        "institution_type": "District general hospital",
+        "acuity_level": "Mixed"
+      }
+    },
+    "L3_calibration_evidence": {
+      "status": "optional",
+      "content": {
+        "note": "Optional for Secondary Operational tier. Not provided in this illustrative record."
+      }
+    },
+    "L4_sensitivity_analysis": {
+      "status": "optional",
+      "content": {
+        "note": "Optional for Secondary Operational tier. Not provided in this illustrative record."
+      }
+    },
+    "L5_gaming_resistance": {
+      "status": "not_required",
+      "content": {
+        "note": "Not required for Secondary Operational tier."
+      }
+    },
+    "L6_lifecycle_validity_rule": {
+      "status": "required",
+      "content": {
+        "re_evaluation_triggers": [
+          "Quarterly review of alert volume trends",
+          "Change in clinical workflow or staffing model",
+          "System version update"
+        ],
+        "scheduled_review": "Aligned with regular operational review cycle"
+      }
+    }
+  },
+  "governance_decision": {
+    "outcome": "Approved",
+    "conditions": [],
+    "next_review_date": "[next quarterly operational review]",
+    "accountable_lead": "[named operational lead]"
+  }
+}

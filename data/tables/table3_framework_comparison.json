@@ -1,0 +1,78 @@
+{
+  "_provenance": "Manuscript Results section, Table 3. Comparison of threshold documentation requirements across governance frameworks.",
+  "_caveat": "All characterisations are the author's interpretive assessment. DCB0129: NHS Clinical Risk Management standard. DTAC: Digital Technology Assessment Criteria. NICE ESF: Evidence Standards Framework. FDA PCCP: Predetermined Change Control Plans.",
+  "table_title": "Table 3. Comparison of threshold documentation requirements across governance frameworks.",
+  "columns": ["framework", "harm_control", "context_key", "calibration", "sensitivity", "gaming", "lifecycle", "tiered"],
+  "data": [
+    {
+      "framework": "DCB0129/0160",
+      "harm_control": "Partial (hazard log)",
+      "context_key": "Yes (intended use)",
+      "calibration": "No",
+      "sensitivity": "No",
+      "gaming": "No",
+      "lifecycle": "No",
+      "tiered": "No"
+    },
+    {
+      "framework": "DTAC",
+      "harm_control": "No",
+      "context_key": "Partial",
+      "calibration": "No",
+      "sensitivity": "No",
+      "gaming": "No",
+      "lifecycle": "Partial",
+      "tiered": "No"
+    },
+    {
+      "framework": "NICE ESF",
+      "harm_control": "No",
+      "context_key": "Partial",
+      "calibration": "Yes (Tier 3b)",
+      "sensitivity": "No",
+      "gaming": "No",
+      "lifecycle": "No",
+      "tiered": "Tiered by evidence level"
+    },
+    {
+      "framework": "FUTURE-AI [26]",
+      "harm_control": "Partial (fairness)",
+      "context_key": "Yes (universality)",
+      "calibration": "Yes (robustness)",
+      "sensitivity": "No",
+      "gaming": "No",
+      "lifecycle": "Partial (monitoring)",
+      "tiered": "No"
+    },
+    {
+      "framework": "FDA PCCP [9]",
+      "harm_control": "No",
+      "context_key": "Partial",
+      "calibration": "Partial",
+      "sensitivity": "No",
+      "gaming": "No",
+      "lifecycle": "Yes (change control)",
+      "tiered": "Risk-based"
+    },
+    {
+      "framework": "WHO AI Ethics [14]",
+      "harm_control": "Partial",
+      "context_key": "Yes",
+      "calibration": "No",
+      "sensitivity": "No",
+      "gaming": "No",
+      "lifecycle": "Partial",
+      "tiered": "No"
+    },
+    {
+      "framework": "TJS (this paper)",
+      "harm_control": "Yes",
+      "context_key": "Yes",
+      "calibration": "Yes",
+      "sensitivity": "Yes",
+      "gaming": "Yes",
+      "lifecycle": "Yes",
+      "tiered": "Yes (Primary/Secondary)"
+    }
+  ]
+}

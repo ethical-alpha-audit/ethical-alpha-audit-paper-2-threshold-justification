@@ -1,0 +1,56 @@
+{
+  "_provenance": "Manuscript Results section, Table 2. Paragraphs specifying TJS layers, mechanisms addressed, tier requirements, and regulatory counterparts.",
+  "_caveat": "All regulatory counterpart mappings are the author's interpretive inferences reflecting governance intent, not statements of regulatory requirement.",
+  "table_title": "Table 2. The Threshold Justification Stack: components, failure mechanisms addressed, tier requirements, and regulatory counterparts.",
+  "columns": ["layer_number", "layer_name", "description", "mechanism_addressed", "tier_requirement", "regulatory_counterpart"],
+  "data": [
+    {
+      "layer_number": 1,
+      "layer_name": "Harm-Control Statement",
+      "description": "Document the specific harm the threshold constrains and the causal pathway",
+      "mechanism_addressed": "Epistemic asymmetry; proxy thresholding",
+      "tier_requirement": "Required: Primary. Recommended: Secondary.",
+      "regulatory_counterpart": "EU AI Act Art. 9; FDA SaMD"
+    },
+    {
+      "layer_number": 2,
+      "layer_name": "Context Key",
+      "description": "Specify clinical setting, patient population, and acuity level",
+      "mechanism_addressed": "Context collapse",
+      "tier_requirement": "Required: Both tiers",
+      "regulatory_counterpart": "EU AI Act Annex IV; FUTURE-AI [26]"
+    },
+    {
+      "layer_number": 3,
+      "layer_name": "Calibration Evidence",
+      "description": "Empirical, simulation, or expert-consensus evidence supporting the numeric value",
+      "mechanism_addressed": "Proxy thresholding; epistemic asymmetry",
+      "tier_requirement": "Required: Primary. Optional: Secondary.",
+      "regulatory_counterpart": "FDA PCCP; CONSORT-AI"
+    },
+    {
+      "layer_number": 4,
+      "layer_name": "Sensitivity Analysis",
+      "description": "Evaluate governance outcomes as threshold varies; identify cliff-edge regions",
+      "mechanism_addressed": "Threshold coupling; boundary gaming",
+      "tier_requirement": "Required: Primary. Optional: Secondary.",
+      "regulatory_counterpart": "FMEA; ISO/IEC 42001"
+    },
+    {
+      "layer_number": 5,
+      "layer_name": "Gaming Resistance",
+      "description": "Assess whether the threshold can be cleared through metric manipulation",
+      "mechanism_addressed": "Boundary gaming",
+      "tier_requirement": "Required: Primary. Not required: Secondary.",
+      "regulatory_counterpart": "NIST AI RMF; audit independence"
+    },
+    {
+      "layer_number": 6,
+      "layer_name": "Lifecycle Validity Rule",
+      "description": "Prespecify conditions triggering threshold re-evaluation",
+      "mechanism_addressed": "Audit-lifecycle disconnect",
+      "tier_requirement": "Required: Both tiers",
+      "regulatory_counterpart": "FDA PCCP; EU AI Act Art. 72"
+    }
+  ]
+}

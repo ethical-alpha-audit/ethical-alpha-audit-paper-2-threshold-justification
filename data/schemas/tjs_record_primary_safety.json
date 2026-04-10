@@ -1,0 +1,84 @@
+{
+  "_epistemic_status": "Illustrative proposed structure. This is NOT a validated standard, NOT an adopted specification, and NOT a normative requirement. It demonstrates how TJS-compliant threshold documentation might be encoded in audit software, based on the committee vignette in the manuscript.",
+  "_provenance": "Constructed from manuscript Discussion section (Illustrative Committee Vignette) and Table 2 (TJS specification).",
+  "record_type": "TJS Threshold Governance Record",
+  "tjs_version": "1.0.0-proposed",
+  "tier": "Primary Safety",
+  "layers_required": 6,
+  "system": {
+    "name": "AI-assisted chest X-ray triage tool",
+    "clinical_domain": "Emergency department radiology",
+    "threshold_metric": "AUROC",
+    "threshold_value": 0.85,
+    "classification_rationale": "Failure can directly cause patient harm (missed pathology leading to delayed diagnosis)"
+  },
+  "layers": {
+    "L1_harm_control_statement": {
+      "status": "required",
+      "content": {
+        "harm_description": "Missed pathology leading to delayed diagnosis",
+        "causal_pathway": "If AUROC falls below threshold, the system fails to prioritise abnormal chest X-rays, leading to delayed radiologist review of critical findings in the emergency department",
+        "harm_severity": "Direct patient harm: delayed diagnosis of potentially life-threatening conditions"
+      }
+    },
+    "L2_context_key": {
+      "status": "required",
+      "content": {
+        "clinical_setting": "Emergency department",
+        "patient_population": "Adult patients",
+        "institution_type": "Urban teaching hospital",
+        "acuity_level": "High (emergency presentations)"
+      }
+    },
+    "L3_calibration_evidence": {
+      "status": "required",
+      "content": {
+        "evidence_type": "External validation",
+        "evidence_summary": "Calibration evidence from external validation study",
+        "performance_range": "Performance stable between AUROC 0.85-0.95"
+      }
+    },
+    "L4_sensitivity_analysis": {
+      "status": "required",
+      "content": {
+        "method": "Threshold variation analysis",
+        "findings": "Performance degrades sharply below AUROC 0.80 but is stable between 0.85-0.95",
+        "cliff_edge_identified": true,
+        "cliff_edge_region": "Below AUROC 0.80"
+      }
+    },
+    "L5_gaming_resistance": {
+      "status": "required",
+      "content": {
+        "assessment": "No gaming vulnerability identified given independent external validation",
+        "validation_independence": "External validation conducted by independent party",
+        "pathways_assessed": ["cohort_restriction", "outcome_labelling", "post_hoc_threshold_selection"]
+      }
+    },
+    "L6_lifecycle_validity_rule": {
+      "status": "required",
+      "content": {
+        "re_evaluation_triggers": [
+          "Quarterly performance audit",
+          "Population drift exceeding 15% from training distribution",
+          "System version update"
+        ],
+        "monitoring_conditions": [
+          "Prospective elderly-subgroup monitoring (patients aged 75+) at 90 days",
+          "Prespecified performance floor of AUROC >= 0.80 in elderly subgroup"
+        ],
+        "scheduled_review": "Six months, coinciding with routine clinical safety case update under DCB0160",
+        "suspension_trigger": "If 90-day subgroup audit reveals performance below prespecified floor, deployment reverts to suspended pending investigation status"
+      }
+    }
+  },
+  "governance_decision": {
+    "outcome": "Approved with conditions",
+    "conditions": [
+      "Prospective elderly-subgroup monitoring (patients aged 75+) at 90 days with prespecified performance floor of AUROC >= 0.80",
+      "Scheduled formal review at six months coinciding with DCB0160 clinical safety case update"
+    ],
+    "next_review_date": "[date + 6 months]",
+    "accountable_lead": "[named accountable lead]"
+  }
+}

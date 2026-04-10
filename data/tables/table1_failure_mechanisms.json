@@ -1,0 +1,44 @@
+{
+  "_provenance": "Manuscript Results section, Table 1. Paragraphs describing six structural failure mechanisms identified through conceptual synthesis.",
+  "_caveat": "This is a structured conceptual synthesis, not a systematic review. Governance gap column reflects the author's interpretive assessment.",
+  "table_title": "Table 1. Synthesis provenance: failure mechanisms, structural descriptions, literature sources, and governance gaps.",
+  "columns": ["failure_mechanism", "structural_description", "key_sources", "governance_gap"],
+  "data": [
+    {
+      "failure_mechanism": "1. Proxy thresholding",
+      "structural_description": "Metric bears only indirect causal relationship to the harm it purports to control",
+      "key_sources": "Suresh & Guttag 2021 [16]; Wiens et al 2019 [17]; Char et al 2018 [15]",
+      "governance_gap": "Most frameworks accept metric achievement as sufficient; causal chain to harm not required"
+    },
+    {
+      "failure_mechanism": "2. Context collapse",
+      "structural_description": "Uniform thresholds applied across settings with materially different risk profiles",
+      "key_sources": "Coiera 2019 [20]; Obermeyer et al 2019 [4]; Kelly et al 2019 [3]; FUTURE-AI [26]",
+      "governance_gap": "EU AI Act Annex IV requires deployment context but does not mandate threshold re-specification per context"
+    },
+    {
+      "failure_mechanism": "3. Threshold coupling",
+      "structural_description": "Multi-metric governance systems assess thresholds independently; compound failure modes remain undetected",
+      "key_sources": "Leveson 2011 [7]; Rajkomar et al 2019 [1]; Parasuraman & Manzey 2010 [21]",
+      "governance_gap": "Least addressed in current standards; ISO 42001 references risk interaction but provides no methodology"
+    },
+    {
+      "failure_mechanism": "4. Boundary gaming",
+      "structural_description": "Hard cutoffs create incentives to optimise the metric rather than improve underlying safety",
+      "key_sources": "Thomas & Uminsky 2022 [19]; Goodhart 1981 [18]; Raji et al 2020 [6]",
+      "governance_gap": "Algorithmic audit independence principles address gaming but are not mandated"
+    },
+    {
+      "failure_mechanism": "5. Epistemic asymmetry",
+      "structural_description": "Quantifiable performance metrics crowd out harder-to-measure sociotechnical risks",
+      "key_sources": "Selbst et al 2019 [13]; Ibrahim et al 2021 [28]; Vokinger et al 2021 [22]",
+      "governance_gap": "WHO 2021/2024 [14] addresses sociotechnical risks qualitatively; no quantitative governance counterpart"
+    },
+    {
+      "failure_mechanism": "6. Audit-lifecycle disconnect",
+      "structural_description": "Threshold justified at initial audit loses validity as population, data pipeline, or system version changes",
+      "key_sources": "FDA PCCP 2023 [9]; Subbaswamy & Saria 2020; FDA SaMD 2021 [8]; FDA 2025 [27]",
+      "governance_gap": "FDA PCCP and EU AI Act Art. 72 address monitoring but do not require prespecified threshold re-evaluation triggers"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+Term,Definition,Manuscript Location
+Threshold Justification Stack (TJS),A tiered documentation architecture specifying six layers of threshold documentation for clinical AI governance records.,Abstract; Results
+Primary Safety Threshold,A governance threshold where failure can directly cause patient harm. Requires all six TJS documentation layers.,Methods: Threshold classification
+Secondary Operational Threshold,A governance threshold governing operational performance where failure does not directly cause irreversible patient harm. Requires three core TJS layers.,Methods: Threshold classification
+Uncertain classification,"When a threshold cannot be clearly classified as Primary Safety or Secondary Operational, Primary Safety requirements apply by default.",Methods: Threshold classification
+Proxy thresholding,Failure mechanism where the metric bears only an indirect causal relationship to the harm it purports to control.,Results: Table 1
+Context collapse,Failure mechanism where uniform thresholds are applied across settings with materially different risk profiles.,Results: Table 1
+Threshold coupling,Failure mechanism where multi-metric governance systems assess thresholds independently; compound failure modes remain undetected.,Results: Table 1
+Boundary gaming,Failure mechanism where hard cutoffs create incentives to optimise the metric rather than improve underlying safety.,Results: Table 1
+Epistemic asymmetry,Failure mechanism where quantifiable performance metrics crowd out harder-to-measure sociotechnical risks.,Results: Table 1
+Audit-lifecycle disconnect,"Failure mechanism where a threshold justified at initial audit loses validity as population, data pipeline, or system version changes.",Results: Table 1
+L1: Harm-Control Statement,TJS Layer 1. Document the specific harm the threshold constrains and the causal pathway.,Results: Table 2
+L2: Context Key,"TJS Layer 2. Specify clinical setting, patient population, and acuity level.",Results: Table 2
+L3: Calibration Evidence,"TJS Layer 3. Empirical, simulation, or expert-consensus evidence supporting the numeric value.",Results: Table 2
+L4: Sensitivity Analysis,TJS Layer 4. Evaluate governance outcomes as threshold varies; identify cliff-edge regions.,Results: Table 2
+L5: Gaming Resistance,TJS Layer 5. Assess whether the threshold can be cleared through metric manipulation.,Results: Table 2
+L6: Lifecycle Validity Rule,TJS Layer 6. Prespecify conditions triggering threshold re-evaluation.,Results: Table 2
+DCB0129,NHS Digital standard for Clinical Risk Management: its Application in the Manufacture of Health IT Systems.,References [30]
+DCB0160,NHS Digital standard for Clinical Risk Management: its Application in the Deployment and Use of Health IT Systems.,References [31]
+PCCP,Predetermined Change Control Plans for AI/ML-Based Software as a Medical Device. FDA guidance (2023).,References [9]
+FUTURE-AI,International consensus guideline for trustworthy and deployable artificial intelligence in healthcare (Lekadir et al 2025).,References [26]
+Conceptual synthesis,"The methodological approach used in this paper: targeted literature search and regulatory analysis to identify structural failure mechanisms, distinct from systematic review.",Methods

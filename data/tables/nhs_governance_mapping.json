@@ -1,0 +1,44 @@
+{
+  "_provenance": "Supplementary Appendix G: TJS Mapping to Existing NHS Governance Artefacts.",
+  "_caveat": "All mappings are interpretive and illustrative; they demonstrate compatibility with existing governance infrastructure rather than implying that these are the only valid operationalisations.",
+  "table_title": "TJS Layer Mapping to Existing NHS Governance Artefacts",
+  "columns": ["tjs_layer", "nhs_artefact", "governance_standard", "notes"],
+  "data": [
+    {
+      "tjs_layer": "L1: Harm-Control Statement",
+      "nhs_artefact": "Clinical hazard log",
+      "governance_standard": "DCB0129; DCB0160",
+      "notes": "Maps to and extends the hazard identification function by requiring an explicit causal pathway from threshold value to harm"
+    },
+    {
+      "tjs_layer": "L2: Context Key",
+      "nhs_artefact": "Intended-use statement",
+      "governance_standard": "DCB0129; DTAC transparency criterion",
+      "notes": "Maps to deployment context documentation already required"
+    },
+    {
+      "tjs_layer": "L3: Calibration Evidence",
+      "nhs_artefact": "Evidence Standards Framework Tier 3b requirements",
+      "governance_standard": "NICE ESF",
+      "notes": "Maps to clinical evidence requirements for digital health technologies"
+    },
+    {
+      "tjs_layer": "L4: Sensitivity Analysis",
+      "nhs_artefact": "Clinical risk assessment",
+      "governance_standard": "DCB0129",
+      "notes": "Extends the clinical risk assessment by documenting how governance outcomes change as threshold varies"
+    },
+    {
+      "tjs_layer": "L5: Gaming Resistance",
+      "nhs_artefact": "Independent assessment principle",
+      "governance_standard": "MHRA Software and AI as a Medical Device guidance",
+      "notes": "Maps to the principle of independent validation embedded in MHRA guidance"
+    },
+    {
+      "tjs_layer": "L6: Lifecycle Validity Rule",
+      "nhs_artefact": "Post-market surveillance obligations; ongoing monitoring",
+      "governance_standard": "MHRA guidance; DTAC clinical safety criterion",
+      "notes": "Maps to post-market surveillance and prespecifies conditions for threshold re-evaluation"
+    }
+  ]
+}

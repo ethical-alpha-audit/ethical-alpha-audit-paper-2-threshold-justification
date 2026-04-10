@@ -1,0 +1,42 @@
+{
+  "outputs/tables/table1_failure_mechanisms.csv": {
+    "notebook": "notebooks/01_tjs_framework_and_failure_mechanisms.ipynb",
+    "stm_targets": ["STM-T1", "STM-F1"],
+    "role": "Table 1: Six structural failure mechanisms with provenance"
+  },
+  "outputs/tables/table2_tjs_specification.csv": {
+    "notebook": "notebooks/01_tjs_framework_and_failure_mechanisms.ipynb",
+    "stm_targets": ["STM-T2", "STM-F2", "STM-F3", "STM-M1"],
+    "role": "Table 2: TJS specification, tier requirements, regulatory counterparts"
+  },
+  "outputs/tables/table3_framework_comparison.csv": {
+    "notebook": "notebooks/02_framework_comparison_and_mappings.ipynb",
+    "stm_targets": ["STM-T3"],
+    "role": "Table 3: Framework comparison matrix (7 frameworks x 8 dimensions)"
+  },
+  "outputs/tables/nhs_governance_mapping.csv": {
+    "notebook": "notebooks/02_framework_comparison_and_mappings.ipynb",
+    "stm_targets": ["STM-M2"],
+    "role": "TJS layer mapping to NHS governance artefacts"
+  },
+  "outputs/tables/gaming_resistance_pathways.csv": {
+    "notebook": "notebooks/02_framework_comparison_and_mappings.ipynb",
+    "stm_targets": ["STM-S6"],
+    "role": "Three gaming exploitation pathways"
+  },
+  "outputs/tables/glossary.csv": {
+    "notebook": "notebooks/02_framework_comparison_and_mappings.ipynb",
+    "stm_targets": ["STM-D1"],
+    "role": "Consolidated key term glossary"
+  },
+  "outputs/schemas/tjs_record_primary_safety_rendered.json": {
+    "notebook": "notebooks/03_tjs_record_schema_demonstration.ipynb",
+    "stm_targets": ["STM-M3", "STM-I2"],
+    "role": "Illustrative 6-layer TJS record (Primary Safety)"
+  },
+  "outputs/schemas/tjs_record_secondary_operational_rendered.json": {
+    "notebook": "notebooks/03_tjs_record_schema_demonstration.ipynb",
+    "stm_targets": ["STM-M3", "STM-I3"],
+    "role": "Illustrative 3-layer TJS record (Secondary Operational)"
+  }
+}

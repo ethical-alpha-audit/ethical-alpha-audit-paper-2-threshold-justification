@@ -1,0 +1,112 @@
+{
+  "_provenance": "Definitions consolidated from throughout the manuscript and supplementary materials.",
+  "table_title": "Glossary of Key Terms",
+  "columns": ["term", "definition", "manuscript_location"],
+  "data": [
+    {
+      "term": "Threshold Justification Stack (TJS)",
+      "definition": "A tiered documentation architecture specifying six layers of threshold documentation for clinical AI governance records.",
+      "manuscript_location": "Abstract; Results"
+    },
+    {
+      "term": "Primary Safety Threshold",
+      "definition": "A governance threshold where failure can directly cause patient harm. Requires all six TJS documentation layers.",
+      "manuscript_location": "Methods: Threshold classification"
+    },
+    {
+      "term": "Secondary Operational Threshold",
+      "definition": "A governance threshold governing operational performance where failure does not directly cause irreversible patient harm. Requires three core TJS layers.",
+      "manuscript_location": "Methods: Threshold classification"
+    },
+    {
+      "term": "Uncertain classification",
+      "definition": "When a threshold cannot be clearly classified as Primary Safety or Secondary Operational, Primary Safety requirements apply by default.",
+      "manuscript_location": "Methods: Threshold classification"
+    },
+    {
+      "term": "Proxy thresholding",
+      "definition": "Failure mechanism where the metric bears only an indirect causal relationship to the harm it purports to control.",
+      "manuscript_location": "Results: Table 1"
+    },
+    {
+      "term": "Context collapse",
+      "definition": "Failure mechanism where uniform thresholds are applied across settings with materially different risk profiles.",
+      "manuscript_location": "Results: Table 1"
+    },
+    {
+      "term": "Threshold coupling",
+      "definition": "Failure mechanism where multi-metric governance systems assess thresholds independently; compound failure modes remain undetected.",
+      "manuscript_location": "Results: Table 1"
+    },
+    {
+      "term": "Boundary gaming",
+      "definition": "Failure mechanism where hard cutoffs create incentives to optimise the metric rather than improve underlying safety.",
+      "manuscript_location": "Results: Table 1"
+    },
+    {
+      "term": "Epistemic asymmetry",
+      "definition": "Failure mechanism where quantifiable performance metrics crowd out harder-to-measure sociotechnical risks.",
+      "manuscript_location": "Results: Table 1"
+    },
+    {
+      "term": "Audit-lifecycle disconnect",
+      "definition": "Failure mechanism where a threshold justified at initial audit loses validity as population, data pipeline, or system version changes.",
+      "manuscript_location": "Results: Table 1"
+    },
+    {
+      "term": "L1: Harm-Control Statement",
+      "definition": "TJS Layer 1. Document the specific harm the threshold constrains and the causal pathway.",
+      "manuscript_location": "Results: Table 2"
+    },
+    {
+      "term": "L2: Context Key",
+      "definition": "TJS Layer 2. Specify clinical setting, patient population, and acuity level.",
+      "manuscript_location": "Results: Table 2"
+    },
+    {
+      "term": "L3: Calibration Evidence",
+      "definition": "TJS Layer 3. Empirical, simulation, or expert-consensus evidence supporting the numeric value.",
+      "manuscript_location": "Results: Table 2"
+    },
+    {
+      "term": "L4: Sensitivity Analysis",
+      "definition": "TJS Layer 4. Evaluate governance outcomes as threshold varies; identify cliff-edge regions.",
+      "manuscript_location": "Results: Table 2"
+    },
+    {
+      "term": "L5: Gaming Resistance",
+      "definition": "TJS Layer 5. Assess whether the threshold can be cleared through metric manipulation.",
+      "manuscript_location": "Results: Table 2"
+    },
+    {
+      "term": "L6: Lifecycle Validity Rule",
+      "definition": "TJS Layer 6. Prespecify conditions triggering threshold re-evaluation.",
+      "manuscript_location": "Results: Table 2"
+    },
+    {
+      "term": "DCB0129",
+      "definition": "NHS Digital standard for Clinical Risk Management: its Application in the Manufacture of Health IT Systems.",
+      "manuscript_location": "References [30]"
+    },
+    {
+      "term": "DCB0160",
+      "definition": "NHS Digital standard for Clinical Risk Management: its Application in the Deployment and Use of Health IT Systems.",
+      "manuscript_location": "References [31]"
+    },
+    {
+      "term": "PCCP",
+      "definition": "Predetermined Change Control Plans for AI/ML-Based Software as a Medical Device. FDA guidance (2023).",
+      "manuscript_location": "References [9]"
+    },
+    {
+      "term": "FUTURE-AI",
+      "definition": "International consensus guideline for trustworthy and deployable artificial intelligence in healthcare (Lekadir et al 2025).",
+      "manuscript_location": "References [26]"
+    },
+    {
+      "term": "Conceptual synthesis",
+      "definition": "The methodological approach used in this paper: targeted literature search and regulatory analysis to identify structural failure mechanisms, distinct from systematic review.",
+      "manuscript_location": "Methods"
+    }
+  ]
+}

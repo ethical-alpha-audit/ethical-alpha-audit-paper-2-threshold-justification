@@ -1,0 +1,67 @@
+{
+  "_epistemic_status": "Illustrative proposed structure. This is NOT a validated standard, NOT an adopted specification, and NOT a normative requirement. It demonstrates how TJS-compliant threshold documentation might be encoded for a Secondary Operational threshold.",
+  "_provenance": "Constructed from manuscript Table 2 (TJS specification, tier requirements) and the abbreviated worked example referenced in Supplementary Appendix B.",
+  "governance_decision": {
+    "accountable_lead": "[named operational lead]",
+    "conditions": [],
+    "next_review_date": "[next quarterly operational review]",
+    "outcome": "Approved"
+  },
+  "layers": {
+    "L1_harm_control_statement": {
+      "content": {
+        "note": "Recommended but not required for Secondary Operational tier. If completed: alert volume exceeding threshold contributes to alert fatigue, which may indirectly affect response times."
+      },
+      "status": "recommended"
+    },
+    "L2_context_key": {
+      "content": {
+        "acuity_level": "Mixed",
+        "clinical_setting": "Hospital ward",
+        "institution_type": "District general hospital",
+        "patient_population": "General inpatients"
+      },
+      "status": "required"
+    },
+    "L3_calibration_evidence": {
+      "content": {
+        "note": "Optional for Secondary Operational tier. Not provided in this illustrative record."
+      },
+      "status": "optional"
+    },
+    "L4_sensitivity_analysis": {
+      "content": {
+        "note": "Optional for Secondary Operational tier. Not provided in this illustrative record."
+      },
+      "status": "optional"
+    },
+    "L5_gaming_resistance": {
+      "content": {
+        "note": "Not required for Secondary Operational tier."
+      },
+      "status": "not_required"
+    },
+    "L6_lifecycle_validity_rule": {
+      "content": {
+        "re_evaluation_triggers": [
+          "Quarterly review of alert volume trends",
+          "Change in clinical workflow or staffing model",
+          "System version update"
+        ],
+        "scheduled_review": "Aligned with regular operational review cycle"
+      },
+      "status": "required"
+    }
+  },
+  "layers_required": 3,
+  "record_type": "TJS Threshold Governance Record",
+  "system": {
+    "classification_rationale": "Failure does not directly cause irreversible patient harm; affects operational performance (alert fatigue, workflow disruption)",
+    "clinical_domain": "Hospital alert management",
+    "name": "AI-driven clinical alert system",
+    "threshold_metric": "Alert volume cap",
+    "threshold_value": "Operational parameter"
+  },
+  "tier": "Secondary Operational",
+  "tjs_version": "1.0.0-proposed"
+}

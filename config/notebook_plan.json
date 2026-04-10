@@ -1,0 +1,39 @@
+{
+  "execution_order": [
+    {
+      "name": "01_tjs_framework_and_failure_mechanisms.ipynb",
+      "path": "notebooks/01_tjs_framework_and_failure_mechanisms.ipynb",
+      "required": true,
+      "expected_outputs": [
+        "outputs/tables/table1_failure_mechanisms.csv",
+        "outputs/tables/table2_tjs_specification.csv"
+      ]
+    },
+    {
+      "name": "02_framework_comparison_and_mappings.ipynb",
+      "path": "notebooks/02_framework_comparison_and_mappings.ipynb",
+      "required": true,
+      "expected_outputs": [
+        "outputs/tables/table3_framework_comparison.csv",
+        "outputs/tables/nhs_governance_mapping.csv",
+        "outputs/tables/gaming_resistance_pathways.csv",
+        "outputs/tables/glossary.csv"
+      ]
+    },
+    {
+      "name": "03_tjs_record_schema_demonstration.ipynb",
+      "path": "notebooks/03_tjs_record_schema_demonstration.ipynb",
+      "required": true,
+      "expected_outputs": [
+        "outputs/schemas/tjs_record_primary_safety_rendered.json",
+        "outputs/schemas/tjs_record_secondary_operational_rendered.json"
+      ]
+    },
+    {
+      "name": "04_release_validation.ipynb",
+      "path": "notebooks/04_release_validation.ipynb",
+      "required": true,
+      "expected_outputs": []
+    }
+  ]
+}

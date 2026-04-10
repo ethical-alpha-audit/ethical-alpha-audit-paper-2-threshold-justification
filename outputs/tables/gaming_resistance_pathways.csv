@@ -1,0 +1,5 @@
+Pathway,Description,Applicability
+Cohort restriction,A developer restricts the validation cohort to subpopulations where the system performs well.,Primary Safety Thresholds
+Outcome labelling,The choice of gold-standard outcome definition materially affects performance metrics.,Primary Safety Thresholds
+Post-hoc threshold selection,The governance threshold is selected after reviewing validation results rather than being pre-specified.,Primary Safety Thresholds
+Auditor independence requirement,"For Primary Safety Thresholds, the party conducting the gaming resistance assessment should have no commercial interest in the outcome.",Primary Safety Thresholds (additional requirement)

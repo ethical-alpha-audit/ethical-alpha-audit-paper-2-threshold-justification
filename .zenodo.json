@@ -1,0 +1,24 @@
+{
+  "title": "Beyond 'Magic Numbers': A Threshold Justification Stack for Clinical AI Governance \u2014 Reproducibility Repository",
+  "description": "Publication-grade reproducibility repository for the BMJ Health & Care Informatics paper. Contains structured renderings of manuscript tables, illustrative TJS record schemas, key term glossary, and deterministic validation harness. This is a conceptual framework repository, not a computational experiment repository.",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Brown, Walter",
+      "affiliation": "Ethical Alpha Audit",
+      "orcid": "0000-0002-6050-8522"
+    }
+  ],
+  "keywords": [
+    "AI governance",
+    "threshold justification",
+    "clinical AI",
+    "TJS",
+    "algorithmic auditing",
+    "patient safety",
+    "reproducibility",
+    "Jupyter"
+  ],
+  "license": "MIT",
+  "access_right": "open"
+}

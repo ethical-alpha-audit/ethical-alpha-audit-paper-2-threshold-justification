@@ -1,0 +1,7 @@
+Layer #,Layer Name,Description,Mechanism Addressed,Tier Requirement,Regulatory Counterpart
+1,Harm-Control Statement,Document the specific harm the threshold constrains and the causal pathway,Epistemic asymmetry; proxy thresholding,Required: Primary. Recommended: Secondary.,EU AI Act Art. 9; FDA SaMD
+2,Context Key,"Specify clinical setting, patient population, and acuity level",Context collapse,Required: Both tiers,EU AI Act Annex IV; FUTURE-AI [26]
+3,Calibration Evidence,"Empirical, simulation, or expert-consensus evidence supporting the numeric value",Proxy thresholding; epistemic asymmetry,Required: Primary. Optional: Secondary.,FDA PCCP; CONSORT-AI
+4,Sensitivity Analysis,Evaluate governance outcomes as threshold varies; identify cliff-edge regions,Threshold coupling; boundary gaming,Required: Primary. Optional: Secondary.,FMEA; ISO/IEC 42001
+5,Gaming Resistance,Assess whether the threshold can be cleared through metric manipulation,Boundary gaming,Required: Primary. Not required: Secondary.,NIST AI RMF; audit independence
+6,Lifecycle Validity Rule,Prespecify conditions triggering threshold re-evaluation,Audit-lifecycle disconnect,Required: Both tiers,FDA PCCP; EU AI Act Art. 72

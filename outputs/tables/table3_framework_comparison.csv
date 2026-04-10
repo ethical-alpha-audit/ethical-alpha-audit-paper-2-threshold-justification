@@ -1,0 +1,8 @@
+Framework,Harm-Control,Context Key,Calibration,Sensitivity,Gaming,Lifecycle,Tiered?
+DCB0129/0160,Partial (hazard log),Yes (intended use),No,No,No,No,No
+DTAC,No,Partial,No,No,No,Partial,No
+NICE ESF,No,Partial,Yes (Tier 3b),No,No,No,Tiered by evidence level
+FUTURE-AI [26],Partial (fairness),Yes (universality),Yes (robustness),No,No,Partial (monitoring),No
+FDA PCCP [9],No,Partial,Partial,No,No,Yes (change control),Risk-based
+WHO AI Ethics [14],Partial,Yes,No,No,No,Partial,No
+TJS (this paper),Yes,Yes,Yes,Yes,Yes,Yes,Yes (Primary/Secondary)

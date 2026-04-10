@@ -1,0 +1,11 @@
+# Frozen environment — generated from validated execution.
+# Notebooks use only pandas and stdlib JSON; these pins cover harness + notebooks.
+python==3.11
+pandas==2.2.*
+jupyterlab==4.3.*
+notebook==7.3.*
+nbformat==5.10.*
+nbclient==0.10.*
+jupyter_client==8.6.*
+ipykernel==6.29.*
+nbconvert==7.16.*
