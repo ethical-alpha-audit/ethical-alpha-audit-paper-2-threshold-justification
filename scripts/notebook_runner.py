@@ -1,6 +1,6 @@
-
 import json
 import os
+import sys
 import time
 from pathlib import Path
 import nbformat
@@ -60,5 +60,8 @@ def execute_all():
     return results
 
 if __name__ == "__main__":
-    for result in execute_all():
+    results = execute_all()
+    for result in results:
         print(result)
+    if any(r["status"] != "ok" for r in results):
+        sys.exit(1)

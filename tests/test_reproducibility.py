@@ -44,6 +44,12 @@ def test_notebooks_exist():
 
 
 def test_manuscript_files_exist():
+    """Portfolio inputs contract (attachment_requirements.json paper-3) + local manuscript copies."""
+    inputs = ROOT / "inputs"
+    assert (inputs / "supplementary.pdf").exists(), "Missing inputs/supplementary.pdf"
+    assert (inputs / "manuscript.pdf").exists() or (inputs / "manuscript.docx").exists(), (
+        "Missing inputs/manuscript.pdf or inputs/manuscript.docx"
+    )
     assert (ROOT / "manuscript" / "Paper3_Manuscript.docx").exists()
     assert (ROOT / "manuscript" / "Paper3_Supplementary_Materials.docx").exists()
 

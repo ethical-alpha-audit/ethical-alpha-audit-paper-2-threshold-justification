@@ -1,5 +1,6 @@
 __pycache__/
 .ipynb_checkpoints/
+logs/_manuscript_pdf_extract.txt
 .env
 .DS_Store
 *.pyc
