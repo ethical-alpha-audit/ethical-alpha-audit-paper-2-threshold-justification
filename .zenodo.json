@@ -1,4 +1,5 @@
 {
+  "doi": "10.5281/zenodo.19499798",
   "title": "Beyond 'Magic Numbers': A Threshold Justification Stack for Clinical AI Governance \u2014 Reproducibility Repository",
   "description": "Publication-grade reproducibility repository for the BMJ Health & Care Informatics paper. Contains structured renderings of manuscript tables, illustrative TJS record schemas, key term glossary, and deterministic validation harness. This is a conceptual framework repository, not a computational experiment repository.",
   "upload_type": "software",
