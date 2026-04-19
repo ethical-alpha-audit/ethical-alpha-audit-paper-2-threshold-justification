@@ -1,4 +1,4 @@
-# Claim Boundary Statement
+﻿# Claim Boundary Statement
 
 ## What this repository claims
 
@@ -18,7 +18,7 @@ The following results are referenced in the Paper 3 Discussion section as suppor
 |----|----------------|--------------|---------------------|
 | XC-1 | 91.7% sensitivity (11/12 cases rejected) | Paper 4 | Discussion: "Consistent Signals From Historical Replay" |
 | XC-2 | 95.8% verdict stability under perturbation (46/48) | Paper 4/5 | Discussion: "Companion studies provide..." |
-| XC-3 | 480/480 dual-dataset structural invariance | Paper 4 | Discussion: "Companion studies provide..." |
+| XC-3 | Dual-dataset structural invariance (zero output divergence across all evaluated fields; see Paper 4 for full enumeration) | Paper 4 | Discussion: "Companion studies provide..." |
 | XC-4 | TP=20, TN=12 confusion matrix | Paper 4 | Discussion: "Companion studies provide..." |
 | XC-5 | Safety gate most frequently binding (83%) | Paper 4 | Discussion: "Consistent Signals From Historical Replay" |
 | XC-6 | 0.40–0.45 cliff-edge region for safety gate | Paper 4/5 | Discussion: "Threshold sensitivity analysis" |
