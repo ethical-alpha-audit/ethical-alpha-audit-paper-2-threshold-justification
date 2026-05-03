@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T17:43:32.655855+00:00",
+  "generated_at": "2026-05-03T17:32:42.254182+00:00",
   "files": [
     {
       "path": "outputs/tables/table1_failure_mechanisms.csv",
@@ -39,6 +39,176 @@
     {
       "path": "outputs/schemas/tjs_record_secondary_operational_rendered.json",
       "sha256": "6974390e621fcc237df6fb2fdc46845d2e19cf3560d51ce0d4037d47c06d0652",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/tables/sensitivity_main_pi_010.csv",
+      "sha256": "f4f6cdde182cd9563cde3f906159f60569ab1b3b94370d5b2091457a0b2d7b5c",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/tables/sensitivity_full_grid.csv",
+      "sha256": "283cdb29f28372046c1f9b8d9de01884478ae43ccb12ace53b0845f151f2441f",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/tables/rater_model_verification.csv",
+      "sha256": "beed1d6ddf98a685e8f52dfae0952566660319efceea1c8057def3c3693fdd12",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_00.csv",
+      "sha256": "745d3c46eefa45f4a26f4317a72da3855bbfb5be3435ce2659302af5d466f85b",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_01.csv",
+      "sha256": "adac14cbbba33aaba5546b91b5f50321fda9cc53fb9fdf2d4506b305b55bf1e3",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_02.csv",
+      "sha256": "2770a448c8ef33453a90b34a8cd796fcca9ab19cddc9b6304610187374a90768",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_03.csv",
+      "sha256": "27446432d72c59337699e79d2118b5fac59b2a1d58d6c3ca95c37e9f3362662f",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_04.csv",
+      "sha256": "4ceeef974b50b61f614dacf31235725f7678effdd0061e4c27b2cc633f15d268",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_05.csv",
+      "sha256": "bc33db9e204ecbac5b65fa2eef6b682348c1fb03a7f741a7eadb0d6b265585f1",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_06.csv",
+      "sha256": "ad47ba08bd6e8601014b8a98609ecca3208d3dc162cf7ea9b33197adfac89325",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_07.csv",
+      "sha256": "45d48a904056319edd253a7752e26fb01e9ee071033b4d65ab8c3ae59f55db52",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_08.csv",
+      "sha256": "be366380711c971f2ff165e110dffd410cf94df557798662a409ea02368801aa",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_09.csv",
+      "sha256": "9d25b3191d07605f2db26e925cdeb248f60be77ae5d7493e6eccde2d4d09dea6",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_10.csv",
+      "sha256": "97f18fdf07064f2f9714d954f9eeba5989ab88b7dc4a0dacfc7af3857f7067bb",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_11.csv",
+      "sha256": "9c30a2f36269309d660e38d04c3879fb48151bbc7b4cd9625c9d5c5ec5944706",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_12.csv",
+      "sha256": "81d38cbe55a862f828b7f8cd2a6d842392ec7d8b5bb3e56571d302941fc8794d",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_13.csv",
+      "sha256": "7882a88c4274b6bd2e9804074c53f5a4f98d8349e00290d9fc86a72b00821648",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_14.csv",
+      "sha256": "8cd5fc4796b1bda1e852316f2993bd2c6995c28c1d42b670472cc2fc981578a0",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_15.csv",
+      "sha256": "682d5401b7d053fde342ae4284c25f7805accd48fad320f72a33c9c7966ad171",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_16.csv",
+      "sha256": "aa1ea878a14746f67b14c89c5d21d28df7ec49c5d62485ad5256a8e006222416",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_17.csv",
+      "sha256": "a6e894d25c174d11c620959200613add6c97cffcfac62eb731ae6fbd2f7a3b09",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_18.csv",
+      "sha256": "004885945556f5598c3fda0e8961c8f2f2eb23a7c82366fd8a22a74026931ae5",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_19.csv",
+      "sha256": "503c78cfb9376523522a12a238ef1972ee9da878d78481fb8539e9bd977d0c48",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_20.csv",
+      "sha256": "06446d91ddc7afba8c3f22f7bc9474b2f06a65d1255e116e9d65aa7db0159e26",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_21.csv",
+      "sha256": "fe9800565f9a6e90b6faaa63cf239679404ba63810e1592420677d765831c7c3",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_22.csv",
+      "sha256": "808aff9e7434ba7e859727191a8ed7e15c194cf684b95edfa634ffee743f5630",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_23.csv",
+      "sha256": "73dadff10871c14161d6472cb18a71efe2fe3689becd3948c12179fe6dd0930c",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_24.csv",
+      "sha256": "f408f3cbc3a40db50ac59898ec2f65d02fba8ec9bbfcf988d1221897b2e5a4fa",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_25.csv",
+      "sha256": "06ebfd62c16484562f35a6a85e9cb43dd53b897b72020466935af0d8b2cc778e",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_26.csv",
+      "sha256": "ec33c1d7986ba34a68c9f96770aa76c1dbf4fe23af7356b05eedcfc5ccff1c3c",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/monte_carlo_logs/replicates_scenario_27.csv",
+      "sha256": "ddad3b88a72a6519cec0390fa8d8e9a2701e4fe2089a12688119c89f125678f6",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/run_metadata.json",
+      "sha256": "38b656184200c86023ba7cc4cc8e4c825776881387a035c72393c868708be175",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/figures/figure_main_kappa_outcomes.png",
+      "sha256": "deb5ce0a5c516be6f69263cdb381da3d174a0b52969b7cc3ea9954e79c1fd452",
+      "exists": true
+    },
+    {
+      "path": "outputs/sensitivity/figures/figure_supp_kappa_pi_grid.png",
+      "sha256": "26335b62e7eac09abc14c8341398296fe4e28904cd669aee8f6b95eb43820562",
       "exists": true
     }
   ]

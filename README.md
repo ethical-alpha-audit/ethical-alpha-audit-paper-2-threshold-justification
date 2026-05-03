@@ -111,8 +111,6 @@ tests/sensitivity/             Sensitivity-specific unit tests
 
 For code-free reading, see [`docs/html/`](docs/html/).
 
-> Notebooks 05–08 will be authored at WS-2.6 Phase 8 (in flight). Until they are placed, this README's "Notebooks" table is forward-looking; the simulation source code, inputs, outputs, tests, and docs are all in place and the simulation can be run via `python -m tjs_sensitivity.simulation` independently of the notebook narrative.
-
 ## Sensitivity simulation: design summary
 
 The simulation answers a single analytical question: *under stated modelling assumptions, how does variation in inter-rater agreement (κ) on the Negative Harm Test propagate to four governance outcomes given the default-to-Primary adjudication rule?*

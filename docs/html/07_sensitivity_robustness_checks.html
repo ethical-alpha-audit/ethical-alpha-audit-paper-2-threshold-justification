@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>04_release_validation</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>07_sensitivity_robustness_checks</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7796,238 +7796,227 @@ a.anchor-link {
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cell-173520">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Notebook-04:-Release-Validation">Notebook 04: Release Validation<a class="anchor-link" href="#Notebook-04:-Release-Validation">¶</a></h1><p><strong>Paper 3:</strong> Beyond 'Magic Numbers': A Threshold Justification Stack for Clinical AI Governance</p>
-<p>This notebook validates the repository structure, data integrity, and output consistency. It should be the last notebook executed and should pass without errors.</p>
+<h1 id="07.-Sensitivity-robustness-checks">07. Sensitivity robustness checks<a class="anchor-link" href="#07.-Sensitivity-robustness-checks">¶</a></h1><p>This notebook extends the primary results (notebook 06) to the full κ × π grid (28 scenarios across 4 base rates: π_Primary ∈ {0.05, 0.10, 0.20, 0.50}). It examines:</p>
+<ol>
+<li><strong>Rater-model calibration</strong>: realised κ vs target κ across the full grid (loaded from <code>outputs/sensitivity/tables/rater_model_verification.csv</code>).</li>
+<li><strong>Analytical ceiling effect</strong>: at the lowest base rate (π = 0.05) and highest target (κ = 0.80), the rater model cannot reach the target — the analytical maximum κ at π = 0.05 with the 2% Uncertain rate is approximately 0.71. The simulation should converge to this ceiling at that scenario cell.</li>
+<li><strong>Outcome variation across base rates</strong>: the four governance outcomes vary not only with κ but also with π. The full-grid table is the basis of the supplementary figure (<code>outputs/sensitivity/figures/figure_supp_kappa_pi_grid.png</code>).</li>
+</ol>
+<p>These checks verify that the simulation behaves correctly under the modelling assumptions stated in <a href="../docs/sensitivity/modelling_assumptions.md"><code>docs/sensitivity/modelling_assumptions.md</code></a>. They are robustness checks against the rater model's internal consistency, not against external data.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput">
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cell-915283">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Directory-Structure">Directory Structure<a class="anchor-link" href="#Directory-Structure">¶</a></h2>
+<p><strong>Epistemic Notice — Sensitivity Analysis Notebooks</strong></p>
+<p>Unlike Paper 3's earlier notebooks (01–04), which render structured data extracted from the manuscript without generating new scientific claims, the notebooks in this sensitivity series (05–08) DO produce new computational findings under stated modelling assumptions. Specifically, they explore how variation in inter-rater agreement (κ) on the Negative Harm Test (NHT) propagates to four governance outcomes, calibrating κ tolerance regimes for the tier-classification rule.</p>
+<p>This work is consistent with the Threshold Justification Stack's non-compensatory architecture. Each governance gate has its own threshold expressed in its own evidential "currency"; the framework rejects exchange rates between currencies. The κ-sensitivity simulation operates entirely within the NHT's own currency — it varies what the tier-classification reliability threshold should be, given the rule's purpose. It does not propose that κ performance on the NHT could compensate for thresholds in other gates of the framework.</p>
+<p>Findings throughout this series are conditional on the modelling assumptions in <a href="../docs/sensitivity/modelling_assumptions.md"><code>docs/sensitivity/modelling_assumptions.md</code></a>. Readers should treat results as methodological calibration evidence — informing what tier-classification reliability would need to look like for the NHT to function as designed — not as standalone empirical claims independent of the framework.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=cell-777622">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Directory structure checks:
-  PASS: manuscript
-  PASS: data/tables
-  PASS: data/schemas
-  PASS: notebooks
-  PASS: outputs/tables
-  PASS: outputs/schemas
-  PASS: config
-  PASS: scripts
-  PASS: docs
-  PASS: tests
-  PASS: logs
-  PASS: tjs_sensitivity
-  PASS: inputs/sensitivity
-  PASS: outputs/sensitivity
-  PASS: outputs/sensitivity/tables
-  PASS: outputs/sensitivity/figures
-  PASS: outputs/sensitivity/monte_carlo_logs
-  PASS: docs/sensitivity
-  PASS: tests/sensitivity
+<pre>Repo root: C:\Users\Walter.Brown\EAA_Portfolio\ethical-alpha-audit-paper-3-framework-comparison
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cell-695440">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Manuscript-Files">Manuscript Files<a class="anchor-link" href="#Manuscript-Files">¶</a></h2>
+<h2 id="07.1-Rater-model-calibration:-realised-%CE%BA-vs-target-%CE%BA">07.1 Rater-model calibration: realised κ vs target κ<a class="anchor-link" href="#07.1-Rater-model-calibration:-realised-%CE%BA-vs-target-%CE%BA">¶</a></h2><p>The rater model (<code>tjs_sensitivity.rater_model</code>) calibrates per-rater error rates by numerical inversion to achieve the target κ on the binary-collapsed classifications. Across the κ × π grid, the <strong>realised κ</strong> (mean across replicates) should match the <strong>target κ</strong> within tight tolerance — modulo the analytical ceiling at low base rates (covered in §07.2).</p>
+<p>The simulation persists realised vs target κ for every scenario in <code>outputs/sensitivity/tables/rater_model_verification.csv</code>. <strong>The κ-sensitivity simulation is conditional on stated modelling assumptions</strong> (P3-C51): a probabilistic rater-error model parameterised to target κ, a binary-plus-Uncertain output alphabet, default-to-Primary adjudication, and a base-rate prior on π_Primary. The calibration check below validates that the rater-error model assumption is honestly applied — the model achieves what it claims to.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=cell-506386">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Manuscript file checks:
-  PASS: Paper3_Manuscript.docx
-  PASS: Paper3_Supplementary_Materials.docx
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Data-File-Integrity">Data File Integrity<a class="anchor-link" href="#Data-File-Integrity">¶</a></h2>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Data table file checks (existence + valid JSON):
-  PASS: table1_failure_mechanisms.json exists
-  PASS: table1_failure_mechanisms.json valid JSON
-  PASS: table2_tjs_specification.json exists
-  PASS: table2_tjs_specification.json valid JSON
-  PASS: table3_framework_comparison.json exists
-  PASS: table3_framework_comparison.json valid JSON
-  PASS: glossary.json exists
-  PASS: glossary.json valid JSON
-  PASS: nhs_governance_mapping.json exists
-  PASS: nhs_governance_mapping.json valid JSON
-  PASS: gaming_resistance_pathways.json exists
-  PASS: gaming_resistance_pathways.json valid JSON
+<pre>Loaded 28 verification rows (28 scenarios = 7 κ × 4 π)
 
-Schema file checks (existence + valid JSON):
-  PASS: tjs_record_primary_safety.json has _epistemic_status
-  PASS: tjs_record_primary_safety.json exists
-  PASS: tjs_record_primary_safety.json valid JSON
-  PASS: tjs_record_secondary_operational.json has _epistemic_status
-  PASS: tjs_record_secondary_operational.json exists
-  PASS: tjs_record_secondary_operational.json valid JSON
+sc_id      π   target κ     realised κ       abs_diff
+    0   0.05       0.20        0.19675        0.00325
+    1   0.05       0.30        0.29680        0.00320
+    2   0.05       0.40        0.39751        0.00249
+    3   0.05       0.50        0.49757        0.00243
+    4   0.05       0.60        0.60565        0.00565
+    5   0.05       0.70        0.70171        0.00171
+    6   0.05       0.80        0.71243        0.08757
+    7   0.10       0.20        0.20127        0.00127
+    8   0.10       0.30        0.29765        0.00235
+    9   0.10       0.40        0.39911        0.00089
+   10   0.10       0.50        0.49929        0.00071
+   11   0.10       0.60        0.59804        0.00196
+   12   0.10       0.70        0.70118        0.00118
+   13   0.10       0.80        0.79700        0.00300
+   14   0.20       0.20        0.20530        0.00530
+   15   0.20       0.30        0.29788        0.00212
+   16   0.20       0.40        0.40124        0.00124
+   17   0.20       0.50        0.50119        0.00119
+   18   0.20       0.60        0.59978        0.00022
+   19   0.20       0.70        0.70022        0.00022
+   20   0.20       0.80        0.79679        0.00321
+   21   0.50       0.20        0.19013        0.00987
+   22   0.50       0.30        0.30061        0.00061
+   23   0.50       0.40        0.39914        0.00086
+   24   0.50       0.50        0.50298        0.00298
+   25   0.50       0.60        0.59837        0.00163
+   26   0.50       0.70        0.69823        0.00177
+   27   0.50       0.80        0.79993        0.00007
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cell-495891">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Output-File-Checks">Output File Checks<a class="anchor-link" href="#Output-File-Checks">¶</a></h2>
+<h2 id="07.2-The-analytical-ceiling-at-low-base-rates">07.2 The analytical ceiling at low base rates<a class="anchor-link" href="#07.2-The-analytical-ceiling-at-low-base-rates">¶</a></h2><p>At the lowest base rate (π = 0.05), the rater model has an <strong>analytical maximum κ</strong> below 1.0 because of the Uncertain-rate floor (u = 0.02). Specifically: even with zero classification error, two raters who disagree on Uncertain-events introduce non-zero apparent disagreement, which caps the achievable Cohen's κ.</p>
+<p>The modelling-assumptions document (<code>docs/sensitivity/modelling_assumptions.md</code> §2) states the analytical maximum κ at π = 0.05 with u = 0.02 is approximately 0.71. Therefore, when the κ grid asks for target κ = 0.80 at π = 0.05, the simulation cannot reach the target — it converges to the analytical ceiling. This is a <strong>documented mathematical property of the rater model</strong> (P3-C51, simulation-specific limits) — the joint-parameter constraint between base rate, Uncertain rate, and achievable κ.</p>
+<p>This is <strong>not a bug</strong>. The simulation correctly identifies the ceiling rather than masking it. The ceiling assert below verifies that the simulation behaves as the rater model's mathematics predicts, not as the target κ would suggest if the ceiling were ignored.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=cell-028955">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Output table checks:
-  PASS: table1_failure_mechanisms.csv exists and non-empty
-  PASS: table2_tjs_specification.csv exists and non-empty
-  PASS: table3_framework_comparison.csv exists and non-empty
-  PASS: glossary.csv exists and non-empty
-  PASS: nhs_governance_mapping.csv exists and non-empty
-  PASS: gaming_resistance_pathways.csv exists and non-empty
+<pre>Ceiling scenario (scenario_id=6):
+  π = 0.05, target κ = 0.80
+  realised κ (mean across 100 replicates) = 0.7124
+  |realised − target| = 0.0876
+  modelling-assumptions doc states analytical maximum κ at π=0.05, u=0.02 ≈ 0.71
 
-Output schema checks:
-  PASS: tjs_record_primary_safety_rendered.json exists and non-empty
-  PASS: tjs_record_secondary_operational_rendered.json exists and non-empty
+All π=0.05 scenarios:
+  target κ     realised κ       abs_diff
+      0.20        0.19675        0.00325
+      0.30        0.29680        0.00320
+      0.40        0.39751        0.00249
+      0.50        0.49757        0.00243
+      0.60        0.60565        0.00565
+      0.70        0.70171        0.00171
+      0.80        0.71243        0.08757
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cell-572959">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Config-File-Checks">Config File Checks<a class="anchor-link" href="#Config-File-Checks">¶</a></h2>
+<h2 id="07.3-Outcome-variation-across-base-rates">07.3 Outcome variation across base rates<a class="anchor-link" href="#07.3-Outcome-variation-across-base-rates">¶</a></h2><p>The full κ × π grid (<code>outputs/sensitivity/tables/sensitivity_full_grid.csv</code>) contains all 28 scenarios. Outcomes vary not only with target κ but also with base rate π — at any fixed κ, the four governance outcomes shift across the four base-rate scenarios. This grid is the basis of the supplementary figure (<code>outputs/sensitivity/figures/figure_supp_kappa_pi_grid.png</code>) and is part of the <strong>simulation-specific limits</strong> (P3-C51) the manuscript discloses: the base-rate prior is a modelling input, and outcomes depend on it.</p>
+<p>For the unsafe-Secondary rate at fixed κ = 0.60: at π = 0.05 the rate is 0.0% (no latent-Primary thresholds to misclassify); at π = 0.10 it is 0.07%; at π = 0.20 it is in between; at π = 0.50 it is materially higher (more latent-Primary thresholds to misclassify, all else equal). The variation pattern is structural — driven by base-rate composition, not by the rater model's calibration behaviour. The assert below verifies this base-rate-driven variation exists in the full grid.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=cell-000927">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Config file checks:
-  PASS: harness_settings.json exists and valid
-  PASS: notebook_plan.json exists and valid
-  PASS: expected_outputs.json exists and valid
-  PASS: trace_map.json exists and valid
+<pre>Loaded 28 scenarios from full grid
+
+At fixed target κ = 0.60, unsafe-Secondary rate varies across base rates:
+     π  unsafe-Sec rate       MCSE
+  0.05          0.00000    0.00000
+  0.10          0.00070    0.00026
+  0.20          0.00469    0.00043
+  0.50          0.01132    0.00047
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cell-731038">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Notebook-Count">Notebook Count<a class="anchor-link" href="#Notebook-Count">¶</a></h2>
+<h2 id="07.4-Pass-criteria">07.4 Pass criteria<a class="anchor-link" href="#07.4-Pass-criteria">¶</a></h2><p>The asserts below verify three experiment-internal properties of the simulation. Per the WS-2.6 Phase 8.1 status taxonomy + Phase 8.3 experiment-authoritative discipline (<code>feedback_experiment_authoritative_manuscript_downstream.md</code>):</p>
+<ul>
+<li><p><strong>assert 1</strong>: Calibration tolerance — across all 27 non-ceiling scenarios, abs_diff between realised κ and target κ is below 0.015. <strong>Tolerance source</strong>: empirical-magnitude observation. Inspecting <code>rater_model_verification.csv</code>, the maximum non-ceiling abs_diff observed across the grid is ≈ 0.01 (at the [π=0.50, target κ=0.20] cell). The 0.015 tolerance reflects floating-point precision of the rater-error-model's numerical inversion plus modest empirical headroom (~50%) over the observed maximum. The assert verifies the simulation's actual numerical behaviour, not a manuscript-stated value. (<strong>P3-C51</strong> — VERIFIED on pass; the rater-error-model modelling-assumption is honestly applied within the model's numerical-inversion precision.)</p>
+</li>
+<li><p><strong>assert 2</strong>: Ceiling effect existence — at (π=0.05, target κ=0.80), the realised κ is materially below target (abs_diff &gt; 0.05), AND realised κ falls in [0.70, 0.72]. <strong>Bound source</strong>: the analytical ceiling derives from the rater model's closed-form constraint (u=0.02 floor + π=0.05 base rate). The bound [0.70, 0.72] is a tight band around the analytical-ceiling value (~0.71 per <code>docs/sensitivity/modelling_assumptions.md</code> §2). The assert verifies the simulation converges to the analytical maximum κ where the target exceeds achievability. (<strong>P3-C51</strong> — VERIFIED on pass; the modelling-assumption analytical limit holds in the simulation.)</p>
+</li>
+<li><p><strong>assert 3</strong>: Outcome variation across base rates — at fixed target κ=0.60, the unsafe-Secondary rate varies across the four base rates (range ≥ 0.005). <strong>Threshold source</strong>: empirical observation that the range across the four π values at κ=0.60 is meaningful (≥ 0.005), distinguishing the full grid from a κ-only sweep. The assert verifies the structural property that the simulation's base-rate dimension produces material outcome variation. (No specific claim ID anchor; the assert demonstrates a property of the full grid's design.)</p>
+</li>
+</ul>
+<p>Claim <strong>P3-C49</strong> (threshold coupling Layer 4 inadequately addressed by current governance standards) earns <strong>Traced</strong> status with <strong>no anchor in this notebook</strong> (Walter Phase 8.4 discipline). The claim is a manuscript-discussion assertion about other governance standards; the simulation has no access to other governance standards and cannot substantiate or refute the claim. The substantive content of P3-C49 lives in the manuscript's Discussion of TJS Layer 4 — a manuscript-only claim that does not derive from the sensitivity simulation.</p>
+<p>Claim <strong>P3-C52</strong> (L4 sensitivity / threshold coupling least methodologically mature) earns <strong>Traced</strong> status: narrative claim about methodological maturity, not a property the simulation can verify.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=cell-620000">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Notebooks found: 8
-  PASS: Exactly 8 notebooks (4 framework + 4 sensitivity)
+<pre>assert 1 (P3-C51 calibration tolerance &lt; 0.015 for all 27 non-ceiling scenarios) ✓
+assert 2 (P3-C51 ceiling effect: realised κ=0.7124 in (0.7, 0.72), abs_diff=0.0876&gt;0.05) ✓
+assert 3 (full-grid base-rate variation at κ=0.60: range=0.01132 &gt;= 0.005; min=0.00000, max=0.01132) ✓
+
+ALL THREE PASS-CRITERION ASSERTS HOLD
+Per Phase 8.1 status taxonomy + Phase 8.3/8.4 experiment-authoritative discipline:
+  P3-C49 (threshold coupling Layer 4 inadequately addressed)  → Traced (NO anchor)
+    (Per Walter Phase 8.4: claim is a meta-statement about other governance
+     standards; the simulation cannot substantiate or refute it. Substantive
+     content of C49 lives in the manuscript Discussion, not this notebook.)
+  P3-C51 (simulation-specific limits)                         → VERIFIED
+    (calibration + ceiling asserts validate the rater-error model assumption)
+  P3-C52 (L4 sensitivity / threshold coupling least mature)   → Traced
+    (narrative claim about methodological maturity)
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cell-678576">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Summary">Summary<a class="anchor-link" href="#Summary">¶</a></h2>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>
-==================================================
-Total checks: 52
-Passed: 52
-Failed: 0
-==================================================
-RELEASE VALIDATION: PASS
-Repository is structurally complete and ready for release.
-</pre>
-</div>
+<hr/>
+<p><strong>Notebook 07 complete.</strong> Robustness checks verify experiment-internal properties: the rater-model calibration is tight across the 27 non-ceiling scenarios; the ceiling effect at (π=0.05, target κ=0.80) appears where the rater model's mathematics predicts; outcome variation across base rates at fixed κ=0.60 is structurally present.</p>
+<p>Per the WS-2.6 Phase 8.3 experiment-authoritative discipline, these asserts verify properties of the simulation itself rather than agreement with manuscript-stated ranges.</p>
+<p>The next notebook (<code>08_sensitivity_discussion_and_implications.ipynb</code>) reconnects the sensitivity findings to the manuscript's Discussion sections — falsification conditions, proposed pilot design, integration mechanics, and anti-gaming considerations. Most claims in notebook 08 are narrative (Traced status); one or two have computational handles for VERIFIED status.</p>
 </div>
 </div>
 </div>

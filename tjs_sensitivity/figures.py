@@ -27,8 +27,10 @@ import matplotlib.pyplot as plt  # noqa: E402
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-TABLES_DIR = REPO_ROOT / "outputs" / "tables"
-FIGURES_DIR = REPO_ROOT / "outputs" / "figures"
+# WS-2.6 Phase 11 fix: paths under outputs/sensitivity/ per the WS-2.6 structural
+# mapping (Walter Phase 3.3 ack). See simulation.py for full rationale.
+TABLES_DIR = REPO_ROOT / "outputs" / "sensitivity" / "tables"
+FIGURES_DIR = REPO_ROOT / "outputs" / "sensitivity" / "figures"
 FIGURES_DIR.mkdir(parents=True, exist_ok=True)
 
 

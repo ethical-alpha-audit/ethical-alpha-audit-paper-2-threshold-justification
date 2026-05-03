@@ -14,6 +14,8 @@ outputs/release_bundle/*.zip
 # operations memory for the full rule.
 inputs/*.docx
 inputs/*.pdf
+manuscript/*.docx
+manuscript/*.pdf
 
 # Repo hygiene additions (WS-2.6 Phase 1)
 .venv/

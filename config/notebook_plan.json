@@ -34,6 +34,30 @@
       "path": "notebooks/04_release_validation.ipynb",
       "required": true,
       "expected_outputs": []
+    },
+    {
+      "name": "05_sensitivity_setup_and_methodology.ipynb",
+      "path": "notebooks/05_sensitivity_setup_and_methodology.ipynb",
+      "required": true,
+      "expected_outputs": []
+    },
+    {
+      "name": "06_sensitivity_primary_results.ipynb",
+      "path": "notebooks/06_sensitivity_primary_results.ipynb",
+      "required": true,
+      "expected_outputs": []
+    },
+    {
+      "name": "07_sensitivity_robustness_checks.ipynb",
+      "path": "notebooks/07_sensitivity_robustness_checks.ipynb",
+      "required": true,
+      "expected_outputs": []
+    },
+    {
+      "name": "08_sensitivity_discussion_and_implications.ipynb",
+      "path": "notebooks/08_sensitivity_discussion_and_implications.ipynb",
+      "required": true,
+      "expected_outputs": []
     }
   ]
 }

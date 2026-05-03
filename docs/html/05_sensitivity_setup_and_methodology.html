@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>04_release_validation</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>05_sensitivity_setup_and_methodology</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7796,238 +7796,211 @@ a.anchor-link {
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cell-085473">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Notebook-04:-Release-Validation">Notebook 04: Release Validation<a class="anchor-link" href="#Notebook-04:-Release-Validation">¶</a></h1><p><strong>Paper 3:</strong> Beyond 'Magic Numbers': A Threshold Justification Stack for Clinical AI Governance</p>
-<p>This notebook validates the repository structure, data integrity, and output consistency. It should be the last notebook executed and should pass without errors.</p>
+<h1 id="05.-Sensitivity-setup-and-methodology">05. Sensitivity setup and methodology<a class="anchor-link" href="#05.-Sensitivity-setup-and-methodology">¶</a></h1><p>This is the first of four sensitivity-analysis notebooks (05–08) for Paper 3. It bridges from the framework-comparison work in notebooks 01–04 to the computational sensitivity analysis: it sets out why sensitivity analysis is required, what analytical question the simulation answers, and what modelling stance the simulation takes. Subsequent notebooks present the primary results (06), robustness checks (07), and the discussion / implications (08).</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput">
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cell-624689">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Directory-Structure">Directory Structure<a class="anchor-link" href="#Directory-Structure">¶</a></h2>
+<p><strong>Epistemic Notice — Sensitivity Analysis Notebooks</strong></p>
+<p>Unlike Paper 3's earlier notebooks (01–04), which render structured data extracted from the manuscript without generating new scientific claims, the notebooks in this sensitivity series (05–08) DO produce new computational findings under stated modelling assumptions. Specifically, they explore how variation in inter-rater agreement (κ) on the Negative Harm Test (NHT) propagates to four governance outcomes, calibrating κ tolerance regimes for the tier-classification rule.</p>
+<p>This work is consistent with the Threshold Justification Stack's non-compensatory architecture. Each governance gate has its own threshold expressed in its own evidential "currency"; the framework rejects exchange rates between currencies. The κ-sensitivity simulation operates entirely within the NHT's own currency — it varies what the tier-classification reliability threshold should be, given the rule's purpose. It does not propose that κ performance on the NHT could compensate for thresholds in other gates of the framework.</p>
+<p>Findings throughout this series are conditional on the modelling assumptions in <a href="../docs/sensitivity/modelling_assumptions.md"><code>docs/sensitivity/modelling_assumptions.md</code></a>. Readers should treat results as methodological calibration evidence — informing what tier-classification reliability would need to look like for the NHT to function as designed — not as standalone empirical claims independent of the framework.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=cell-910181">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Directory structure checks:
-  PASS: manuscript
-  PASS: data/tables
-  PASS: data/schemas
-  PASS: notebooks
-  PASS: outputs/tables
-  PASS: outputs/schemas
-  PASS: config
-  PASS: scripts
-  PASS: docs
-  PASS: tests
-  PASS: logs
-  PASS: tjs_sensitivity
-  PASS: inputs/sensitivity
-  PASS: outputs/sensitivity
-  PASS: outputs/sensitivity/tables
-  PASS: outputs/sensitivity/figures
-  PASS: outputs/sensitivity/monte_carlo_logs
-  PASS: docs/sensitivity
-  PASS: tests/sensitivity
+<pre>Repo root: C:\Users\Walter.Brown\EAA_Portfolio\ethical-alpha-audit-paper-3-framework-comparison
+Sensitivity inputs:  C:\Users\Walter.Brown\EAA_Portfolio\ethical-alpha-audit-paper-3-framework-comparison\inputs\sensitivity
+Sensitivity outputs: C:\Users\Walter.Brown\EAA_Portfolio\ethical-alpha-audit-paper-3-framework-comparison\outputs\sensitivity
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cell-329445">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Manuscript-Files">Manuscript Files<a class="anchor-link" href="#Manuscript-Files">¶</a></h2>
+<h2 id="05.1-Why-sensitivity-analysis:-bridging-from-framework">05.1 Why sensitivity analysis: bridging from framework<a class="anchor-link" href="#05.1-Why-sensitivity-analysis:-bridging-from-framework">¶</a></h2><p>The framework-comparison work in notebooks 01–04 establishes the Threshold Justification Stack (TJS): six documentation layers for Primary Safety thresholds, three for Secondary Operational. The classification rule is the Negative Harm Test (NHT): a threshold may be classified Secondary Operational only if its failure cannot lead to clinical intervention or omission.</p>
+<p>The sensitivity analysis is required because <strong>the framework's tier-stratified documentation depth depends on tier-classification reliability for the proportionality argument to hold</strong> (P3-C36). <strong>If tier classification is unreliable, neither the burden reduction at the Secondary tier nor the proportionality of the documentation requirement is defensible</strong> (P3-C53). The entire architecture rests on the premise that the NHT can be applied consistently.</p>
+<p>This dependency is structural: <strong>the TJS depends on consistent classification of thresholds as Primary Safety or Secondary Operational</strong> (P3-C48). The sensitivity simulation in this series tests how robust the framework is to imperfect classification — not by measuring real-world κ (that would be empirical validation, deferred to the proposed pilot in §"Proposed pilot design with prespecified feasibility endpoints"), but by analysing what governance outcomes follow under stated modelling assumptions across a range of hypothetical κ values.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cell-266837">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="05.2-The-Negative-Harm-Test-%E2%80%94-operational-definition">05.2 The Negative Harm Test — operational definition<a class="anchor-link" href="#05.2-The-Negative-Harm-Test-%E2%80%94-operational-definition">¶</a></h2><p>The classification rule, expressed operationally, is: <strong>a threshold may be classified Secondary Operational only if its failure cannot lead to clinical intervention or omission</strong> (P3-C54). This is the boolean test that any single rater must make for any candidate threshold.</p>
+<p>Two simulated raters apply this test independently per threshold. The output alphabet for each rater is <code>{Primary, Secondary, Uncertain}</code> — the third option captures cases where the rater cannot confidently apply the test. To avoid systematic risk-shifting, the adjudication rule is <strong>default-to-Primary</strong> on disagreement or Uncertain: if either rater says Primary, OR if either rater says Uncertain, the threshold is classified Primary.</p>
+<p>This means the only path to a Secondary classification is <code>(rater_a == SECONDARY) AND (rater_b == SECONDARY)</code>. In all other cases the threshold receives the heavier Primary documentation requirement. The rule is conservative by design.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=cell-172842">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Manuscript file checks:
-  PASS: Paper3_Manuscript.docx
-  PASS: Paper3_Supplementary_Materials.docx
+<pre>Rater output alphabet (size 3): ('Primary', 'Secondary', 'Uncertain')
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cell-146469">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Data-File-Integrity">Data File Integrity<a class="anchor-link" href="#Data-File-Integrity">¶</a></h2>
+<h2 id="05.3-Analytical-question-and-modelling-stance">05.3 Analytical question and modelling stance<a class="anchor-link" href="#05.3-Analytical-question-and-modelling-stance">¶</a></h2><p>The simulation answers a single analytical question: <em>under stated modelling assumptions, given an assumed inter-rater agreement κ on the NHT and the default-to-Primary adjudication rule, what governance outcomes follow</em> (P3-C47).</p>
+<p>The four governance outcomes the simulation tracks:</p>
+<ol>
+<li><strong>Misclassification rate (Primary → Secondary)</strong>: the proportion of latent-Primary thresholds that the adjudicated rule classifies as Secondary. This is the safety-critical error: under-documentation of safety-critical thresholds.</li>
+<li><strong>Misclassification rate (Secondary → Primary)</strong>: the proportion of latent-Secondary thresholds that the adjudicated rule classifies as Primary. This is the over-documentation error: extra documentation burden for thresholds that don't need it.</li>
+<li><strong>Net Primary rate</strong>: the post-adjudication share of thresholds receiving the heavier Primary classification. Higher rates mean more documentation burden.</li>
+<li><strong>Over-escalation burden</strong> (hours per 100 thresholds): the documentation-burden delta caused by mis-classifications relative to perfect classification.</li>
+</ol>
+<p>A critical epistemic posture: <strong>the simulation is sensitivity analysis, not empirical estimation</strong> (P3-C38). The κ values are scenario inputs, not measurements. The rater-error model is a mathematical abstraction calibrated to achieve target κ; it is not a model of how real raters actually err. The question is "what would follow if κ were 0.40 or 0.60 or 0.80", not "what is κ in any particular real institution".</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cell-537579">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="05.4-The-rater-model:-two-simulated-raters">05.4 The rater model: two simulated raters<a class="anchor-link" href="#05.4-The-rater-model:-two-simulated-raters">¶</a></h2><p>The simulation places <strong>two independent simulated raters per threshold</strong> (P3-C37). Each rater independently:</p>
+<ol>
+<li>With probability 0.02, returns <code>Uncertain</code>.</li>
+<li>Otherwise, with probability <code>(1 - error_rate)</code> returns the latent true tier; with probability <code>error_rate</code> returns the opposite tier.</li>
+</ol>
+<p>The Uncertain rate is held constant at 2% across all κ scenarios so that κ variation is driven purely by classification-error variation. The per-rater <code>error_rate</code> is calibrated by numerical inversion to achieve the target Cohen's κ at the given base rate.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=cell-653714">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Data table file checks (existence + valid JSON):
-  PASS: table1_failure_mechanisms.json exists
-  PASS: table1_failure_mechanisms.json valid JSON
-  PASS: table2_tjs_specification.json exists
-  PASS: table2_tjs_specification.json valid JSON
-  PASS: table3_framework_comparison.json exists
-  PASS: table3_framework_comparison.json valid JSON
-  PASS: glossary.json exists
-  PASS: glossary.json valid JSON
-  PASS: nhs_governance_mapping.json exists
-  PASS: nhs_governance_mapping.json valid JSON
-  PASS: gaming_resistance_pathways.json exists
-  PASS: gaming_resistance_pathways.json valid JSON
-
-Schema file checks (existence + valid JSON):
-  PASS: tjs_record_primary_safety.json has _epistemic_status
-  PASS: tjs_record_primary_safety.json exists
-  PASS: tjs_record_primary_safety.json valid JSON
-  PASS: tjs_record_secondary_operational.json has _epistemic_status
-  PASS: tjs_record_secondary_operational.json exists
-  PASS: tjs_record_secondary_operational.json valid JSON
+<pre>Master seed (deterministic master): 20260426
+κ grid (7 values): [0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]
+Base-rate grid (4 values): [0.05, 0.1, 0.2, 0.5]
+Total scenarios: 28
 </pre>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Output-File-Checks">Output File Checks<a class="anchor-link" href="#Output-File-Checks">¶</a></h2>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=cell-359645">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Output table checks:
-  PASS: table1_failure_mechanisms.csv exists and non-empty
-  PASS: table2_tjs_specification.csv exists and non-empty
-  PASS: table3_framework_comparison.csv exists and non-empty
-  PASS: glossary.csv exists and non-empty
-  PASS: nhs_governance_mapping.csv exists and non-empty
-  PASS: gaming_resistance_pathways.csv exists and non-empty
-
-Output schema checks:
-  PASS: tjs_record_primary_safety_rendered.json exists and non-empty
-  PASS: tjs_record_secondary_operational_rendered.json exists and non-empty
+<pre>Target κ: 0.60
+Realised κ (single replicate, n=1000): 0.000
+Distribution of rater_a: Primary=120, Secondary=863, Uncertain=17
 </pre>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Config-File-Checks">Config File Checks<a class="anchor-link" href="#Config-File-Checks">¶</a></h2>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=cell-038781">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Config file checks:
-  PASS: harness_settings.json exists and valid
-  PASS: notebook_plan.json exists and valid
-  PASS: expected_outputs.json exists and valid
-  PASS: trace_map.json exists and valid
+<pre>Target κ → per-rater error rate (at π_Primary = 0.10, uncertain_prob = 0.02):
+  target κ    error rate
+      0.20        0.1701
+      0.30        0.1195
+      0.40        0.0836
+      0.50        0.0565
+      0.60        0.0353
+      0.70        0.0181
+      0.80        0.0039
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cell-993543">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Notebook-Count">Notebook Count<a class="anchor-link" href="#Notebook-Count">¶</a></h2>
+<h2 id="05.5-Pass-criteria">05.5 Pass criteria<a class="anchor-link" href="#05.5-Pass-criteria">¶</a></h2><p>This setup notebook verifies the following invariants. Failure of any assertion below is a setup-level reproducibility failure — it means the simulation inputs or the rater model are not what the manuscript and <code>docs/sensitivity/simulation_design.md</code> describe.</p>
+<p>The asserts cover:</p>
+<ul>
+<li>The master seed parses to the expected value (<code>20260426</code>).</li>
+<li>The κ grid matches the manuscript-stated values <code>{0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80}</code>.</li>
+<li>The base-rate grid matches <code>{0.05, 0.10, 0.20, 0.50}</code>.</li>
+<li>The rater output alphabet has exactly three elements <code>{Primary, Secondary, Uncertain}</code>.</li>
+<li>The κ-to-error-rate analytical inversion produces a monotonically decreasing error rate as target κ increases (higher reliability ⇒ lower error rate).</li>
+</ul>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=cell-763707">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Notebooks found: 8
-  PASS: Exactly 8 notebooks (4 framework + 4 sensitivity)
+<pre>ALL PASS-CRITERION ASSERTS HOLD
+Setup invariants verified:
+  - master seed: 20260426
+  - κ grid: [0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]
+  - base-rate grid: [0.05, 0.1, 0.2, 0.5]
+  - rater alphabet: {'Secondary', 'Primary', 'Uncertain'}
+  - κ→error rate monotonic: ✓
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cell-338975">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Summary">Summary<a class="anchor-link" href="#Summary">¶</a></h2>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>
-==================================================
-Total checks: 52
-Passed: 52
-Failed: 0
-==================================================
-RELEASE VALIDATION: PASS
-Repository is structurally complete and ready for release.
-</pre>
-</div>
+<hr/>
+<p><strong>Notebook 05 complete.</strong> Setup verified; the framework dependency on tier-classification reliability is established (P3-C53, P3-C48); the operational NHT classification rule is documented (P3-C54); the analytical question is framed (P3-C47); the modelling stance (P3-C38, P3-C36) is declared; the rater model (P3-C37) is loaded and demonstrated.</p>
+<p>The next notebook (<code>06_sensitivity_primary_results.ipynb</code>) runs the full Monte Carlo sweep across the 28 (κ, π) scenarios and derives the three κ regimes (falsification κ &lt; 0.40; caution 0.40 ≤ κ &lt; 0.60; operational κ ≥ 0.60) at the manuscript's primary base rate π_Primary = 0.10.</p>
 </div>
 </div>
 </div>

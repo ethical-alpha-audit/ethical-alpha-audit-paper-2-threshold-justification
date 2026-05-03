@@ -42,8 +42,12 @@ else:
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-INPUTS_DIR = REPO_ROOT / "inputs"
-OUTPUTS_DIR = REPO_ROOT / "outputs"
+# WS-2.6 Phase 11 fix: paths under inputs/sensitivity/ + outputs/sensitivity/ per the
+# WS-2.6 structural mapping (Walter Phase 3.3 ack). The zip's original paths (inputs/,
+# outputs/) collided with P3's existing framework-comparison content; sensitivity scope
+# is namespaced to inputs/sensitivity/ and outputs/sensitivity/ to preserve clean separation.
+INPUTS_DIR = REPO_ROOT / "inputs" / "sensitivity"
+OUTPUTS_DIR = REPO_ROOT / "outputs" / "sensitivity"
 TABLES_DIR = OUTPUTS_DIR / "tables"
 MC_LOG_DIR = OUTPUTS_DIR / "monte_carlo_logs"
 
@@ -107,6 +111,10 @@ def main(
     n_thresholds: int = 1000,
     n_replicates: int = 100,
 ) -> None:
+    # WS-2.6 Phase 11 fix: reconfigure stdout to UTF-8 so Greek letters (κ, π)
+    # in progress prints don't crash on Windows cp1252 console default.
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     kappa_grid, pi_grid, master_seed = _load_inputs()
 
     started = time.time()
