@@ -1,0 +1,10 @@
+{
+  "_disclaimer": "Sensitivity-analysis κ scenario inputs; not empirical estimates.",
+  "kappa_values": [0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80],
+  "comments": {
+    "0.20": "lower-bound stress test",
+    "0.40": "manuscript prespecified falsification condition (κ < 0.40 → insufficient reliability)",
+    "0.60": "manuscript illustrative target benchmark",
+    "0.80": "high-reliability reference scenario (Landis & Koch substantial agreement band)"
+  }
+}

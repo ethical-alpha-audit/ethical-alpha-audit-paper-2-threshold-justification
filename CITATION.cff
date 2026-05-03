@@ -4,6 +4,29 @@ version: "1.0.0"
 doi: 10.5281/zenodo.19499798
 message: "If you use this repository, please cite the accompanying BMJ Health & Care Informatics paper."
 type: software
+abstract: >
+  Reproducibility repository for Paper 3 of the Ethical Alpha Audit research
+  programme. The repository combines two scopes:
+
+  (1) Framework-comparison work (notebooks 01–04): renders manuscript Tables 1–3
+  (six structural failure mechanisms; TJS specification; framework comparison),
+  TJS record schema demonstrations, and release validation. Existing scope
+  through repository version 1.0.0.
+
+  (2) Computational sensitivity analysis (notebooks 05–08, package
+  ``tjs_sensitivity/``, added at WS-2.6 in 2026-05-03): models how variation
+  in inter-rater agreement (κ) on the Negative Harm Test propagates to four
+  governance outcomes under stated modelling assumptions. Three κ regimes
+  (falsification κ<0.40, caution 0.40≤κ<0.60, operational κ≥0.60) are derived
+  analytically from the simulation outputs.
+
+  NON-VALIDATION DISCLAIMER for sensitivity work: the simulation is a
+  computational sensitivity analysis under stated modelling assumptions; it
+  does not validate the TJS framework empirically, does not estimate κ values
+  for any real institutional setting, and does not substitute for human
+  inter-rater validation. The κ tolerance regime is normative-from-analysis
+  and is replaceable by empirical pilot data when available. See
+  ``docs/sensitivity/non_validation_disclaimer.md`` for the full statement.
 authors:
   - family-names: Brown
     given-names: Walter
@@ -20,3 +43,16 @@ keywords:
   - algorithmic auditing
   - patient safety
   - reproducibility
+  - inter-rater reliability
+  - Cohen's kappa
+  - sensitivity analysis
+  - Monte Carlo simulation
+  - Negative Harm Test
+references:
+  - type: article
+    title: "Beyond 'Magic Numbers': A Threshold Justification Stack for Clinical AI Governance"
+    authors:
+      - family-names: Brown
+        given-names: Walter
+    year: 2026
+    notes: "Manuscript under review at BMJ Health & Care Informatics; DOI to be assigned at acceptance."

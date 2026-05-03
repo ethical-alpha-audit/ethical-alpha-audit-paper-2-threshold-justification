@@ -119,3 +119,68 @@ For governance automation purposes, interpret the prior matrix’s **`VERIFIED`*
 - **EAA phrase check (`structured override`):** A case-insensitive substring search over `word/document.xml` in `inputs/manuscript.docx` found **no** occurrences of **“structured override”** (or **“override”** as a standalone governance term in that XML text). This is a **terminology alignment flag** only: it does **not** assert absence from other portfolio documents, only from this manuscript file’s extracted text.
 - **No internal contradiction detected** between (a) “normative / not empirically validated” framing (P3-C14–P3-C15; Discussion) and (b) companion empirical narration (P3-C29–P3-C31), provided readers preserve the manuscript’s **preliminary / non-generalised** qualifiers and the XC boundary statement.
 
+## P3 Stage 3 — Sensitivity Extension Claims (P3-C36–P3-C56) — added at WS-2.6 Phase 0
+
+**Source:** Fresh extraction from `inputs/manuscript.docx` (Paper3 Manuscript v5 FINAL, sha `7d3531e9...`) at WS-2.6 Phase 0; UNION ALL combination with the existing 35-claim register; arbitrated per Walter's Phase 0.4c response and Phase 0.5 Quick-path arbitration (2026-05-03).
+
+**Total claim count after extension:** 56 (P3-C01–P3-C56).
+
+**Status convention for new claims:** All entries P3-C36–P3-C56 begin at status `MISSING`. The WS-2.6 Phase 11 quality gate (notebook execution + output validation) updates each to `Traced` (or `VERIFIED` where Walter confirms evidence is sufficient) based on the new sensitivity notebooks (05–08) that cover the simulation work. The "Notebook / code" and "Output / evidence" columns are placeholders until Phase 8 notebook authoring assigns specific paths.
+
+### Sensitivity-extension claim register
+
+| Claim ID | Atomic claim (paraphrase from manuscript v5 FINAL) | Manuscript anchor | Notebook / code | Output / evidence | Status |
+|---|---|---|---|---|---|
+| P3-C36 | The framework's tier-stratified documentation depth depends on tier-classification reliability for the proportionality argument to hold. | Methods §"Computational sensitivity analysis: design" | TBD (Phase 8) | TBD (Phase 11) | MISSING |
+| P3-C37 | Two simulated raters classify each threshold as one of {Primary, Secondary, Uncertain}. | Methods §"Computational sensitivity analysis: design" | TBD (Phase 8) | TBD (Phase 11) | MISSING |
+| P3-C38 | The simulation is sensitivity analysis, not empirical estimation. | Methods §"Computational sensitivity analysis: design" | TBD (Phase 8) | TBD (Phase 11) | MISSING |
+| P3-C39 | Under stated modelling assumptions, the four governance outcomes vary monotonically with target κ. | Results §"Sensitivity analysis: κ regimes for the Negative Harm Test" | TBD (Phase 8) | TBD (Phase 11) | MISSING |
+| P3-C40 | Three κ regimes follow from the sensitivity outputs under stated modelling assumptions. | Results §"Sensitivity analysis: κ regimes for the Negative Harm Test" | TBD (Phase 8) | TBD (Phase 11) | MISSING |
+| P3-C41 | κ < 0.40 is the falsification regime (insufficient inter-rater reliability for unsupervised tier-classification use). | Results §"Sensitivity analysis: κ regimes for the Negative Harm Test" | TBD (Phase 8) | TBD (Phase 11) | MISSING |
+| P3-C42 | 0.40 ≤ κ < 0.60 is the caution regime (acceptable with operational safeguards). | Results §"Sensitivity analysis: κ regimes for the Negative Harm Test" | TBD (Phase 8) | TBD (Phase 11) | MISSING |
+| P3-C43 | κ ≥ 0.60 is the operational regime (acceptable under default-to-Primary adjudication). | Results §"Sensitivity analysis: κ regimes for the Negative Harm Test" | TBD (Phase 8) | TBD (Phase 11) | MISSING |
+| P3-C44 | The κ regime is normative-from-analysis, not empirical (replaceable by empirical pilot data when available). | Results §"Sensitivity analysis: κ regimes for the Negative Harm Test" | TBD (Phase 8) | TBD (Phase 11) | MISSING |
+| P3-C45 | The proposed pilot inter-rater reliability exercise produces κ < 0.40 on Primary/Secondary tier classification (falsification condition). | Discussion §"Theory of change and falsification conditions" | TBD (Phase 8) | TBD (Phase 11) | MISSING |
+| P3-C46 | The first falsification condition is interpretable as a regime with quantified analytical consequences (cross-references κ regimes results). | Discussion §"Theory of change and falsification conditions" | TBD (Phase 8) | TBD (Phase 11) | MISSING |
+| P3-C47 | The computational sensitivity analysis answers an analytical question about the tier-classification rule under stated modelling assumptions: given an assumed κ value and the default-to-Primary adjudication, what governance outcomes follow. | Discussion §"Sensitivity analysis: scope and limits" | TBD (Phase 8) | TBD (Phase 11) | MISSING |
+| P3-C48 | The TJS depends on consistent classification of thresholds as Primary Safety or Secondary Operational. | Discussion §"Tier classification reliability" | TBD (Phase 8) | TBD (Phase 11) | MISSING |
+| P3-C49 | Threshold coupling (Layer 4) remains the structural concern most inadequately addressed by current governance standards. | Discussion §"Threshold coupling: the least mature layer" | TBD (Phase 8) | TBD (Phase 11) | MISSING |
+| P3-C50 | The supplementary pilot protocol formalises an empirical feasibility assessment within an existing hospital AI oversight committee. | Discussion §"Proposed pilot design with prespecified feasibility endpoints" | TBD (Phase 8) | TBD (Phase 11) | MISSING |
+| P3-C51 | The κ-sensitivity simulation is conditional on stated modelling assumptions (probabilistic rater-error model parameterised to target κ; binary-plus-Uncertain output alphabet; default-to-Primary adjudication; base-rate prior on π_Primary). | Discussion §"Simulation-specific limits" | TBD (Phase 8) | TBD (Phase 11) | MISSING |
+| P3-C52 | L4 (sensitivity analysis / threshold coupling) is the least methodologically mature layer. | Discussion §"Specific layer limits" | TBD (Phase 8) | TBD (Phase 11) | MISSING |
+| P3-C53 | A documentation architecture proposing tier-stratified documentation depth depends on tier-classification reliability for the proportionality argument to hold: if tier classification is unreliable, neither the burden reduction at the Secondary tier nor the proportionality of the documentation requirement is defensible. | Introduction (bridging methodological claim; Walter Phase 0.4c ADD) | TBD (Phase 8) | TBD (Phase 11) | MISSING |
+| P3-C54 | The classification rule is the Negative Harm Test: a threshold may be classified Secondary Operational only if its failure cannot lead to clinical intervention or omission (operational definition). | Methods §"Threshold classification" (Walter Phase 0.4c ADD) | TBD (Phase 8) | TBD (Phase 11) | MISSING |
+| P3-C55 | TJS integration requires three procedural changes to existing governance infrastructure: (a) a threshold justification record is produced for each numeric threshold at the point of deployment or substantive modification; (b) layers populated per the tier classification; (c) record routed to the appropriate committee. | Discussion §"Integrating TJS Into Existing Hospital Audit Infrastructure" (Walter Phase 0.4c ADD) | TBD (Phase 8) | TBD (Phase 11) | MISSING |
+| P3-C56 | Documentation artefacts can be produced as compliance theatre — records completed for each threshold but without substantive engagement with the harm-control link or the sensitivity analysis (anti-gaming limitation acknowledgement). | Discussion §"Ritualistic compliance" (Walter Phase 0.4c ADD) | TBD (Phase 8) | TBD (Phase 11) | MISSING |
+
+### Aliases (alternate phrasings of existing claims; recorded for cross-reference, no new IDs)
+
+These fresh-extraction wordings are alternate phrasings of existing claim IDs. Walter arbitrated each at Phase 0.4c (Section E + Section G) and Phase 0.5 Quick-path (F27/F34/F54 demoted from initial ADD recommendation to ALIAS to avoid duplicating P3-C24/C27/C28).
+
+| Fresh ID | Aliases to | Note |
+|---|---|---|
+| F36 | P3-C11 | Tier-gaming counter-position aliased to existing gaming-resistance claim. |
+| F50 | P3-C03 | Production-model single-author limitation aliased to existing single-author method statement. |
+| F51 | P3-C35 | "No primary data" statement aliased to existing data availability statement. |
+| F04 | P3-C06 | Abstract restatement of TJS development aliased to TJS specification claim. |
+| F09 | P3-C06 | Introduction restatement of TJS development aliased to TJS specification claim. |
+| F11 | P3-C04 | Contribution restatement aliased to existing contribution claim. |
+| F37 | P3-C04 | Discussion contribution restatement aliased to existing contribution claim. |
+| F55 | P3-C15 | Conclusions restatement aliased to TJS-as-normative-proposal claim. |
+| F27 | P3-C24 | Table 3 framework-comparison restatement aliased to existing Table 3 comparison claim (Phase 0.5 Quick-path). |
+| F34 | P3-C27 | Tiered-structure-as-proportionality-response aliased to existing documentation-burden defence claim (Phase 0.5 Quick-path). |
+| F54 | P3-C28 | Patient-level-consequence restatement aliased to existing patient-level consequence claim (Phase 0.5 Quick-path). |
+
+### Retired fresh-extraction entries (no claims added)
+
+These fresh-extraction entries did not become claims:
+
+- **F01** — title text; structural metadata, no semantic claim (Walter Phase 0.4c RETIRE).
+- **18 false positives** — caption labels (Table N., Figure N., L3., L4.), single-word section markers (Methods./Results./Conclusions.), Supplementary Appendix labels, reference numbers, single-word counter-position responses (TJS response./Steelman./Residual risk.). Caught by the Phase 0.1 claim-marker regex but not actually claims.
+- **2 structural metadata** — F02 ("What this study adds" header content), F03 ("How this study might affect…" header content). Journal-format framing rather than substantively-claimed propositions.
+
+### Cross-references (Phase 8 author guidance)
+
+- **P3-C36 and P3-C53** both relate to tier-classification reliability as foundation for the proportionality argument, with different argumentative framings (P3-C36 is Methods-side scope-statement; P3-C53 is Introduction-side bridging claim). Phase 8 notebooks may want to cross-reference both when discussing the proportionality dependency.
+- **P3-C39** references "four governance outcomes" — Phase 8 notebooks should enumerate the four outcomes explicitly in markdown narrative when referencing this claim, since the register entry is concise. The four outcomes per the simulation: misclassification rates pre-adjudication; net-Primary classification rate; unsafe-Secondary rate; over-escalation burden.
+

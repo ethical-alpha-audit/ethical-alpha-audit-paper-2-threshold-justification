@@ -14,3 +14,13 @@ outputs/release_bundle/*.zip
 # operations memory for the full rule.
 inputs/*.docx
 inputs/*.pdf
+
+# Repo hygiene additions (WS-2.6 Phase 1)
+.venv/
+venv/
+env/
+.pytest_cache/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
