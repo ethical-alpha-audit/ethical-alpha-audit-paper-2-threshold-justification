@@ -1,0 +1,172 @@
+# canonical_documents.yaml — P3 (framework comparison)
+# Schema version: 1.0
+# Workstream: WS-CANONICAL-SOURCE-AUTOMATION
+# Disposition (per WS-AUDIT-DOF Pass 1): COMPLETE-AND-CURRENT both axes (gold standard)
+
+paper:
+  identifier: P3
+  repo_directory: ethical-alpha-audit-paper-3-framework-comparison
+  procedural_storage_subdir: paper-3-framework-comparison
+
+editorial_commitments:
+  target_journal: "BMJ Health & Care Informatics"
+  submission_status: released
+  variant_lock_history:
+    - locked_at: 2026-05-03
+      variant: "Paper3 Manuscript v5 FINAL.docx"
+      sha: 7d3531e9f6828fb0a6244cded573b7310f0b51a8adf9816761ffe444537262e6
+      target_journal_at_lock: "BMJ Health & Care Informatics"
+      decision_basis: "WS-2.4 P3 manuscript deployment (filesystem-only per no-commit-manuscripts policy)"
+      retired_variants: []
+
+axes:
+  manuscript:
+    structure: single-file
+    axis_status_summary: clean
+    documents:
+      - filename: manuscript.docx
+        canonical_path: inputs/manuscript.docx
+        source_location: inputs-direct
+        canonical_sha256: 7d3531e9f6828fb0a6244cded573b7310f0b51a8adf9816761ffe444537262e6
+        size_bytes: 35244
+        last_known_modified: 2026-05-03T13:34:47
+        status: present-in-canonical
+        candidate_source_location: null
+        notes: "v5 FINAL deployed at WS-2.4; bit-exact mirror in procedural storage; gold-standard discipline pattern (WS-2.6 21-claim verification)"
+
+  supplementary:
+    structure: single-file
+    axis_status_summary: clean
+    documents:
+      - filename: supplementary.docx
+        canonical_path: inputs/supplementary.docx
+        source_location: inputs-direct
+        canonical_sha256: 9672ab1cc9f7f251a05717572b0e83fb9f57fff3a49482afd1b488f8be5beedd
+        size_bytes: 24632
+        last_known_modified: 2026-05-03T18:02:57
+        status: present-in-canonical
+        candidate_source_location: null
+        notes: "v3 deployed at WS-2.6 (post-sensitivity-zip integration); contains Appendices A-K with computational sensitivity analysis as Appendix K"
+
+  notebook:
+    structure: standard-notebooks-directory
+    axis_status_summary: clean
+    documents:
+      - filename: notebooks/01_tjs_framework_and_failure_mechanisms.ipynb
+        canonical_path: notebooks/01_tjs_framework_and_failure_mechanisms.ipynb
+        source_location: inputs-direct
+        canonical_sha256: 930beb9699606be46e7630155a9e2d5920c459e72fdc83ac629f071b024f6336
+        size_bytes: 23544
+        last_known_modified: 2026-05-03T19:36:56
+        status: present-in-canonical
+        candidate_source_location: null
+        notes: "Step 4b clean per WS-3 Day 3"
+      - filename: notebooks/02_framework_comparison_and_mappings.ipynb
+        canonical_path: notebooks/02_framework_comparison_and_mappings.ipynb
+        source_location: inputs-direct
+        canonical_sha256: 4883790fd0e71b2d43cbf3daa1cbd97f27b31116d09b268c17ba1d68c639d731
+        size_bytes: 35843
+        last_known_modified: 2026-05-03T19:36:56
+        status: present-in-canonical
+        candidate_source_location: null
+        notes: "Step 4b clean per WS-3 Day 3"
+      - filename: notebooks/03_tjs_record_schema_demonstration.ipynb
+        canonical_path: notebooks/03_tjs_record_schema_demonstration.ipynb
+        source_location: inputs-direct
+        canonical_sha256: af435659b3237fb1645135bd5766ba83648aa3c230cb879b286117aeb0638ecb
+        size_bytes: 21344
+        last_known_modified: 2026-05-03T19:36:56
+        status: present-in-canonical
+        candidate_source_location: null
+        notes: "Step 4b clean per WS-3 Day 3"
+      - filename: notebooks/04_release_validation.ipynb
+        canonical_path: notebooks/04_release_validation.ipynb
+        source_location: inputs-direct
+        canonical_sha256: 4dc432a1d2cd3fa76a5065d5a488b0526d9e21ac39247877fe480fa139741a0b
+        size_bytes: 14685
+        last_known_modified: 2026-05-03T18:32:24
+        status: present-in-canonical
+        candidate_source_location: null
+        notes: "Step 4b clean per WS-3 Day 3"
+      - filename: notebooks/05_sensitivity_setup_and_methodology.ipynb
+        canonical_path: notebooks/05_sensitivity_setup_and_methodology.ipynb
+        source_location: inputs-direct
+        canonical_sha256: 23de5c4fdd8216487e355964002f93101ad469d505fc9ac92ceebe7ec8e4a9f8
+        size_bytes: 21137
+        last_known_modified: 2026-05-03T18:32:30
+        status: present-in-canonical
+        candidate_source_location: null
+        notes: "Step 4b clean per WS-3 Day 3"
+      - filename: notebooks/06_sensitivity_primary_results.ipynb
+        canonical_path: notebooks/06_sensitivity_primary_results.ipynb
+        source_location: inputs-direct
+        canonical_sha256: 96bf654ad6fe58abd6e179f6352903ae7aaa251a166f7e88614da76d7137be22
+        size_bytes: 27297
+        last_known_modified: 2026-05-03T18:32:33
+        status: present-in-canonical
+        candidate_source_location: null
+        notes: "Step 4b clean per WS-3 Day 3"
+      - filename: notebooks/07_sensitivity_robustness_checks.ipynb
+        canonical_path: notebooks/07_sensitivity_robustness_checks.ipynb
+        source_location: inputs-direct
+        canonical_sha256: 22eb15352fe2259645a6b2083a9a2ae457eee2eda8d61037830fe1fb1ea31a5f
+        size_bytes: 26122
+        last_known_modified: 2026-05-03T18:32:36
+        status: present-in-canonical
+        candidate_source_location: null
+        notes: "Step 4b clean per WS-3 Day 3"
+      - filename: notebooks/08_sensitivity_discussion_and_implications.ipynb
+        canonical_path: notebooks/08_sensitivity_discussion_and_implications.ipynb
+        source_location: inputs-direct
+        canonical_sha256: f63f7e361ad16aa52f50fab6247ec93828f4b3176cb9434ba7f21363ed52a2fa
+        size_bytes: 19158
+        last_known_modified: 2026-05-03T18:32:41
+        status: present-in-canonical
+        candidate_source_location: null
+        notes: "Step 4b clean per WS-3 Day 3"
+
+  multimedia:
+    structure: not-applicable
+    axis_status_summary: not-applicable
+    documents: []
+
+destination_workstreams:
+  - workstream: WS-Sub-P3-remaining-items
+    class: B
+    consolidated_template_applies: true
+    paper_specific_gate_iii: "Walter decides to submit P3 to BMJ HCI imminently (per Walter Phase 1 R4 STEP 6 R1 reformulation); P3 already at released-state per WS-AUDIT-DOF Pass 1 gold standard; no WS-Release-P3 prerequisite (R2 dropped)"
+    obligations_routed_here:
+      - "Cover letter authoring (Paper3 CoverLetter.docx 13096 B in inbox)"
+      - "MANIFEST.sha256 reconciliation (5601 B in inbox; relevant to sensitivity-zip)"
+      - "Stale manuscript.pdf cleanup (B1 disposition; deferred from WS-2.4)"
+    blocking_status: blocked-pending-trigger-remediation
+  - workstream: WS-Sub-P3-sensitivity-zip-scope
+    class: D
+    obligations_routed_here:
+      - "(SCOPE ABSORBED by WS-2.6; no remaining obligations on this scope)"
+    blocking_status: superseded
+  - workstream: WS-Release-P3
+    class: dropped
+    obligations_routed_here: []
+    blocking_status: dropped
+
+sync_metadata:
+  procedural_storage_match_required: true
+  last_sync_check: null
+  paper_drift_summary: clean
+  per_axis_drift_summary:
+    manuscript: clean
+    supplementary: clean
+    notebook: clean
+    multimedia: not-applicable
+  per_document_drift_detail: []
+
+provenance:
+  schema_version: "1.0"
+  authored_at: 2026-05-06T20:30:00
+  authored_by: "WS-CANONICAL-SOURCE-AUTOMATION Task 1 STEP 1 deployment"
+  audit_basis:
+    - "WS-AUDIT-DOF Pass 1 P3 audit (closure summary Section 1 row 2 + Section 7 row P3)"
+    - "Phase 1 R4 audit"
+    - "Live SHA metadata gathered 2026-05-06"
+  last_revision_basis: "Initial deployment authoring per Task 1 STEP 1"
