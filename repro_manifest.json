@@ -1,7 +1,7 @@
 {
   "repo_name": "ethical-alpha-audit-paper-3-threshold-justification",
   "version": "1.0.0",
-  "paper": "Paper 3 \u2014 BMJ Health & Care Informatics: Beyond 'Magic Numbers'",
+  "paper": "Paper 2 \u2014 BMJ Health & Care Informatics: Beyond 'Magic Numbers'",
   "manuscript_status": "pre-submission",
   "environment_status": "pinned in requirements.txt and environment.lock",
   "output_policy": "All deterministic artefacts generated into outputs/ and hash-locked in config/expected_outputs.json",

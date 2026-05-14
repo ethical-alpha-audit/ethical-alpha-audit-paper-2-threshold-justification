@@ -2,7 +2,7 @@
 
 ## What this repository claims
 
-This repository faithfully renders and explains the content of Paper 3: "Beyond 'Magic Numbers': A Threshold Justification Stack for Clinical AI Governance." Specifically:
+This repository faithfully renders and explains the content of Paper 2: "Beyond 'Magic Numbers': A Threshold Justification Stack for Clinical AI Governance." Specifically:
 
 1. **RC-1:** The three core manuscript tables (failure mechanisms, TJS specification, framework comparison) are rendered as structured CSV files from JSON source data extracted from the manuscript text.
 2. **RC-2:** A consolidated glossary of key terms is provided, with all definitions sourced from the manuscript.
@@ -12,7 +12,7 @@ This repository faithfully renders and explains the content of Paper 3: "Beyond 
 
 ## What this repository does NOT claim
 
-The following results are referenced in the Paper 3 Discussion section as supporting context from companion papers. They are **NOT reproduced, computed, or validated in this repository.**
+The following results are referenced in the Paper 2 Discussion section as supporting context from companion papers. They are **NOT reproduced, computed, or validated in this repository.**
 
 | ID | Excluded Result | Source Paper | Manuscript Location |
 |----|----------------|--------------|---------------------|
@@ -27,7 +27,7 @@ The following results are referenced in the Paper 3 Discussion section as suppor
 
 ## Why these exclusions matter
 
-Paper 3 is a **conceptual synthesis and normative governance proposal**. It proposes the TJS framework but explicitly states that empirical validation has not been conducted. The companion-paper results cited in the Discussion provide context but are not Paper 3's own scientific contributions. Reproducing them here would misrepresent the epistemic boundaries of the paper.
+Paper 2 is a **conceptual synthesis and normative governance proposal**. It proposes the TJS framework but explicitly states that empirical validation has not been conducted. The companion-paper results cited in the Discussion provide context but are not Paper 2's own scientific contributions. Reproducing them here would misrepresent the epistemic boundaries of the paper.
 
 ## Where to find the companion results
 

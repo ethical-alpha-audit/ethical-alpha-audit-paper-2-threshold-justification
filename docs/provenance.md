@@ -2,7 +2,7 @@
 
 ## Data files
 
-All structured data in this repository derives from the Paper 3 manuscript and supplementary materials.
+All structured data in this repository derives from the Paper 2 manuscript and supplementary materials.
 
 | File | Source | Extraction Method |
 |------|--------|-------------------|
@@ -21,7 +21,7 @@ The two illustrative TJS record schemas in `data/schemas/` are constructed from 
 
 ## Companion paper cross-references
 
-The Paper 3 Discussion section references numerical results from companion papers. These results are **documented here for context only** and are **not reproduced in this repository**:
+The Paper 2 Discussion section references numerical results from companion papers. These results are **documented here for context only** and are **not reproduced in this repository**:
 
 - **Paper 1** (Positioning): Evidence enrichment pipeline, canonical dataset construction
 - **Paper 4** (Historical Replay): 91.7% sensitivity (11/12), confusion matrix (TP=20, TN=12), perturbation stability, gate ablation

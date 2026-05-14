@@ -2,7 +2,7 @@
 
 ## Paper classification
 
-Paper 3 is a **conceptual synthesis and normative governance proposal**. It is not a systematic review and does not report empirical findings. No primary data were generated.
+Paper 2 is a **conceptual synthesis and normative governance proposal**. It is not a systematic review and does not report empirical findings. No primary data were generated.
 
 ## Search strategy
 

@@ -1,10 +1,10 @@
 ﻿# Claim Traceability Matrix
 
-**Repo:** ethical-alpha-audit-paper-3-framework-comparison  
+**Repo:** ethical-alpha-audit-paper-2-threshold-justification  
 **Updated:** 2026-04-12 (Engineer traceability draft + **P3 QA session**: independent `pytest`, `reproduce_all.py`, hash validation, and tabular artefact checks)  
 **Claims:** 35 (P3-C01–P3-C35) manuscript- and scope-grounded items | **VERIFIED** in the matrix below applies only where this repo session produced direct evidence (see status column); Narrative wording re-extracted from inputs/manuscript.docx (2026-04-19 baseline) from `inputs/manuscript.pdf` in the QA session.
 
-This matrix maps **Paper 3 manuscript claims** and **repository fidelity statements** to notebooks, data artefacts, and outputs. It does not restate excluded companion-paper results (see `docs/claim_boundary_statement.md`).
+This matrix maps **Paper 2 manuscript claims** and **repository fidelity statements** to notebooks, data artefacts, and outputs. It does not restate excluded companion-paper results (see `docs/claim_boundary_statement.md`).
 
 ## Manuscript-grounded claims (conceptual / methodological)
 
@@ -93,7 +93,7 @@ For governance automation purposes, interpret the prior matrix’s **`VERIFIED`*
 | P3-C27 | `TRACED_MANUSCRIPT_ONLY` | Normative proportionality argument with regulatory references; interpretive (consistent with P3-C05). |
 | P3-C28 | `TRACED_MANUSCRIPT_ONLY` | Conceptual patient-harm pathway statement; aligns logically with tier definitions (P3-C06) but not a separate tabular artefact. |
 | P3-C29 | `TRACED_UPSTREAM` | Validation tier programme and companion evidence bases (Paper 4 / Paper 5 family per `docs/claim_boundary_statement.md`; portfolio graph shows P3 tier-2 upstream includes **P4** in `eaa_system/dependency_graph.json`). |
-| P3-C30 | `TRACED_UPSTREAM` | Quantitative companion statements require upstream repos for independent recomputation/verification; manuscript remains the **authoritative wording** for what is claimed in Paper 3 Discussion. |
+| P3-C30 | `TRACED_UPSTREAM` | Quantitative companion statements require upstream repos for independent recomputation/verification; manuscript remains the **authoritative wording** for what is claimed in Paper 2 Discussion. |
 | P3-C31 | `TRACED_UPSTREAM` | Perturbation / cliff-edge numeric statements are manuscript-reported companion-context; treat recomputation as upstream. |
 | P3-C32 | `TRACED_MANUSCRIPT_ONLY` | Scope boundary list is manuscript-local governance scoping text. |
 | P3-C33 | `TO_VERIFY_LATER` | Determinism / canonical-engine lineage is **not** covered by `config/trace_map.json`; portfolio **shared-core** / engine archives would be the appropriate verification locus (outside this repo’s hash-locked notebook tables). |
@@ -107,7 +107,7 @@ For governance automation purposes, interpret the prior matrix’s **`VERIFIED`*
 ## P3 — Risk register (refresh-derived)
 
 - **Over-claim / interpretive comparison risk (regulatory & framework):** P3-C21–P3-C22, P3-C24, P3-C27 retain the manuscript’s explicit **interpretive** posture (consistent with P3-C05/P3-C08); readers should not treat table mappings as regulatory intent.
-- **Unsupported *numerical generalisation* risk:** P3-C30–P3-C31 bundle **dataset-specific** and **preliminary** language in places, but still embed **hard numbers** that can be mistaken for Paper 3 empirical contributions if read outside `docs/claim_boundary_statement.md`.
+- **Unsupported *numerical generalisation* risk:** P3-C30–P3-C31 bundle **dataset-specific** and **preliminary** language in places, but still embed **hard numbers** that can be mistaken for Paper 2 empirical contributions if read outside `docs/claim_boundary_statement.md`.
 - **Implicit assumptions:** P3-C25 relies on a **stylised committee process** as illustration; P3-C29 assumes a **validation tier taxonomy** whose institutional meaning depends on the broader Ethical Alpha Audit programme framing.
 - **Cross-paper dependency (not verified inside P3):** P3-C29–P3-C31 depend on companion papers / programme artefacts (**P4** and related sensitivity work) for independent numeric confirmation.
 

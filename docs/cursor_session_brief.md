@@ -1,6 +1,6 @@
 # Cursor Session Brief
 
-- Repo: ethical-alpha-audit-paper-3-framework-comparison
+- Repo: ethical-alpha-audit-paper-2-threshold-justification
 - Phase: QA
 - Upstream: shared-core, P4
 - Task: Final QA validation and release promotion
