@@ -1,12 +1,17 @@
-# canonical_documents.yaml — P3 (framework comparison)
+# canonical_documents.yaml — P2 (threshold justification)
 # Schema version: 1.0
 # Workstream: WS-CANONICAL-SOURCE-AUTOMATION
 # Disposition (per WS-AUDIT-DOF Pass 1): COMPLETE-AND-CURRENT both axes (gold standard)
+# Phase 2C (2026-05-14): repo renamed from paper-3-framework-comparison to
+# paper-2-threshold-justification; identifier flipped P3->P2 to match the
+# manuscript ("Beyond 'Magic Numbers': A Threshold Justification Stack for
+# Clinical AI Governance", target BMJ Health & Care Informatics). See the
+# variant_lock_history annotation below for the historical filename trail.
 
 paper:
-  identifier: P3
-  repo_directory: ethical-alpha-audit-paper-3-framework-comparison
-  procedural_storage_subdir: paper-3-framework-comparison
+  identifier: P2
+  repo_directory: ethical-alpha-audit-paper-2-threshold-justification
+  procedural_storage_subdir: paper-2-threshold-justification
 
 editorial_commitments:
   target_journal: "BMJ Health & Care Informatics"
@@ -18,6 +23,10 @@ editorial_commitments:
       target_journal_at_lock: "BMJ Health & Care Informatics"
       decision_basis: "WS-2.4 P3 manuscript deployment (filesystem-only per no-commit-manuscripts policy)"
       retired_variants: []
+      renamed_to: "paper2_threshold_justification_manuscript.docx"
+      renamed_at: "2026-05-14"
+      rename_phase: "Phase 2C"
+      rename_reason: "P2/P3 resolution: paper renumbered from 3 to 2 to match its threshold-justification content. Manuscript title 'A Threshold Justification Stack for Clinical AI Governance: Method Specification and Computational Sensitivity Analysis' establishes the canonical pairing. Original filename Paper3 Manuscript v5 FINAL.docx preserved as historical record of pre-Phase-2C naming."
 
 axes:
   manuscript:

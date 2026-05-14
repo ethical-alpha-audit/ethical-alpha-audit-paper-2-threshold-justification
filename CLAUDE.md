@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-Paper 3 of the Ethical Alpha Audit research programme — *"Beyond 'Magic Numbers': A Threshold Justification Stack for Clinical AI Governance"* (target journal: *BMJ Health & Care Informatics*). The repository combines two scopes that share one harness:
+Paper 2 of the Ethical Alpha Audit research programme — *"Beyond 'Magic Numbers': A Threshold Justification Stack for Clinical AI Governance"* (target journal: *BMJ Health & Care Informatics*). The repository combines two scopes that share one harness:
 
 1. **Framework-comparison** (notebooks 01–04) — renders manuscript Tables 1–3, TJS record schemas, governance crosswalks, and release validation from structured JSON in `data/`. Deterministic transformations of static inputs; no randomness, no external data.
 2. **κ-sensitivity simulation** (notebooks 05–08, package `tjs_sensitivity/`, added WS-2.6 on 2026-05-03) — Monte Carlo simulation of how inter-rater agreement (κ) on the Negative Harm Test propagates to governance outcomes. 7 κ values × 4 base rates × 100 replicates × 1,000 thresholds = 2,800 replicate runs. Bit-exactly reproducible via `numpy.random.SeedSequence.spawn` with master seed in [inputs/sensitivity/seed.txt](inputs/sensitivity/seed.txt).

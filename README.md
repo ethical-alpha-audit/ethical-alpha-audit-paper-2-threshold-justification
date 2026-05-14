@@ -2,14 +2,14 @@
 
 [![DOI](https://zenodo.org/badge/1194630564.svg)](https://doi.org/10.5281/zenodo.19499798)
 
-> **Paper 3** of the Ethical Alpha Audit research programme
+> **Paper 2** of the Ethical Alpha Audit research programme
 >
 > Author: Walter Brown — Ethical Alpha Audit
 > ORCID: [0000-0002-6050-8522](https://orcid.org/0000-0002-6050-8522)
 >
 > Target journal: *BMJ Health & Care Informatics*
 
-This repository combines two complementary scopes for Paper 3:
+This repository combines two complementary scopes for Paper 2:
 
 1. **Framework-comparison work** (notebooks 01–04, repository v1.0.0 baseline) — renders manuscript Tables 1–3, TJS record schemas, and release validation.
 2. **Computational sensitivity analysis** (notebooks 05–08, package `tjs_sensitivity/`, added 2026-05-03) — models how variation in inter-rater agreement (κ) on the Negative Harm Test propagates to four governance outcomes under stated modelling assumptions.
@@ -134,13 +134,13 @@ Full assumption disclosure: [`docs/sensitivity/modelling_assumptions.md`](docs/s
 
 ## What this repository does NOT contain
 
-- No primary data were generated (Paper 3 is conceptual synthesis + computational sensitivity analysis)
+- No primary data were generated (Paper 2 is conceptual synthesis + computational sensitivity analysis)
 - No empirical κ estimates for any real institutional setting (the simulation uses scenario-input κ values, not measurements)
 - No companion-paper numerical results (Papers 1, 4, 5 results live in their own repositories — see [`docs/claim_boundary_statement.md`](docs/claim_boundary_statement.md))
 
 ## Claim traceability and boundary
 
-This repository renders the Paper 3 manuscript and computationally explores its sensitivity claims. The full claim-to-artefact register lives in [`docs/claim_traceability.md`](docs/claim_traceability.md) (56 claims P3-C01..P3-C56 as of 2026-05-03; framework-comparison claims P3-C01..P3-C35 + sensitivity-extension claims P3-C36..P3-C56).
+This repository renders the Paper 2 manuscript and computationally explores its sensitivity claims. The full claim-to-artefact register lives in [`docs/claim_traceability.md`](docs/claim_traceability.md) (56 claims P3-C01..P3-C56 as of 2026-05-03; framework-comparison claims P3-C01..P3-C35 + sensitivity-extension claims P3-C36..P3-C56; note: claim-ID prefixes retain the pre-Phase-2C "P3-" series for historical traceability with referenced docs — this is known-pending and will be revisited in a separate edit cycle).
 
 It does **not** reproduce numerical results from companion papers. The Discussion section of the manuscript cross-references companion findings (e.g. historical replay sensitivity, perturbation stability); these results belong to their respective repositories. See [`docs/claim_boundary_statement.md`](docs/claim_boundary_statement.md) for the full exclusion register.
 

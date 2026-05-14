@@ -1,11 +1,11 @@
 cff-version: 1.2.0
-title: "Paper 3: Beyond 'Magic Numbers' — A Threshold Justification Stack for Clinical AI Governance"
+title: "Paper 2: Beyond 'Magic Numbers' — A Threshold Justification Stack for Clinical AI Governance"
 version: "1.0.0"
 doi: 10.5281/zenodo.19499798
 message: "If you use this repository, please cite the accompanying BMJ Health & Care Informatics paper."
 type: software
 abstract: >
-  Reproducibility repository for Paper 3 of the Ethical Alpha Audit research
+  Reproducibility repository for Paper 2 of the Ethical Alpha Audit research
   programme. The repository combines two scopes:
 
   (1) Framework-comparison work (notebooks 01–04): renders manuscript Tables 1–3
@@ -32,7 +32,7 @@ authors:
     given-names: Walter
     orcid: "https://orcid.org/0000-0002-6050-8522"
     affiliation: "Ethical Alpha Audit"
-repository-code: "https://github.com/ethical-alpha-audit/ethical-alpha-audit-paper-3-framework-comparison"
+repository-code: "https://github.com/ethical-alpha-audit/ethical-alpha-audit-paper-2-threshold-justification"
 license: MIT
 date-released: "2026-04-08"
 keywords:
