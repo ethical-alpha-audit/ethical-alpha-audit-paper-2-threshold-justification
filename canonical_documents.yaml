@@ -64,75 +64,75 @@ axes:
       - filename: notebooks/01_tjs_framework_and_failure_mechanisms.ipynb
         canonical_path: notebooks/01_tjs_framework_and_failure_mechanisms.ipynb
         source_location: inputs-direct
-        canonical_sha256: 930beb9699606be46e7630155a9e2d5920c459e72fdc83ac629f071b024f6336
-        size_bytes: 23544
-        last_known_modified: 2026-05-03T19:36:56
+        canonical_sha256: d424e5886c8990308a27771840c7a753b2ce8fca6ebb3b0365a2c28c4372a44f
+        size_bytes: 23027
+        last_known_modified: 2026-05-14T20:28:42
         status: present-in-canonical
         candidate_source_location: null
-        notes: "Step 4b clean per WS-3 Day 3"
+        notes: "Phase 2C paper-number substitution; canonical metadata refreshed"
       - filename: notebooks/02_framework_comparison_and_mappings.ipynb
         canonical_path: notebooks/02_framework_comparison_and_mappings.ipynb
         source_location: inputs-direct
-        canonical_sha256: 4883790fd0e71b2d43cbf3daa1cbd97f27b31116d09b268c17ba1d68c639d731
-        size_bytes: 35843
-        last_known_modified: 2026-05-03T19:36:56
+        canonical_sha256: 2e7c5531cff901da0c61f7edcc0253d4bb692a10a1f09733130a057bafa86aa0
+        size_bytes: 35042
+        last_known_modified: 2026-05-14T20:28:42
         status: present-in-canonical
         candidate_source_location: null
-        notes: "Step 4b clean per WS-3 Day 3"
+        notes: "Phase 2C paper-number substitution; canonical metadata refreshed"
       - filename: notebooks/03_tjs_record_schema_demonstration.ipynb
         canonical_path: notebooks/03_tjs_record_schema_demonstration.ipynb
         source_location: inputs-direct
-        canonical_sha256: af435659b3237fb1645135bd5766ba83648aa3c230cb879b286117aeb0638ecb
-        size_bytes: 21344
-        last_known_modified: 2026-05-03T19:36:56
+        canonical_sha256: 37c7be3a466b5b8e092bee94a8c370946be6d77ed07475efbd8ec8497af92533
+        size_bytes: 20827
+        last_known_modified: 2026-05-14T20:28:42
         status: present-in-canonical
         candidate_source_location: null
-        notes: "Step 4b clean per WS-3 Day 3"
+        notes: "Phase 2C paper-number substitution; canonical metadata refreshed"
       - filename: notebooks/04_release_validation.ipynb
         canonical_path: notebooks/04_release_validation.ipynb
         source_location: inputs-direct
-        canonical_sha256: 4dc432a1d2cd3fa76a5065d5a488b0526d9e21ac39247877fe480fa139741a0b
-        size_bytes: 14685
-        last_known_modified: 2026-05-03T18:32:24
+        canonical_sha256: 55bad0691629e8651e8e22aa45211440c300855d2c83bb6906573c104518af30
+        size_bytes: 14242
+        last_known_modified: 2026-05-14T20:28:42
         status: present-in-canonical
         candidate_source_location: null
-        notes: "Step 4b clean per WS-3 Day 3"
+        notes: "Phase 2C paper-number substitution; canonical metadata refreshed"
       - filename: notebooks/05_sensitivity_setup_and_methodology.ipynb
         canonical_path: notebooks/05_sensitivity_setup_and_methodology.ipynb
         source_location: inputs-direct
-        canonical_sha256: 23de5c4fdd8216487e355964002f93101ad469d505fc9ac92ceebe7ec8e4a9f8
-        size_bytes: 21137
-        last_known_modified: 2026-05-03T18:32:30
+        canonical_sha256: 8e56455ed885d1ebcd0a76bfadfd71b7f4e0f84ba2e453bdad754b7c943bfb03
+        size_bytes: 20712
+        last_known_modified: 2026-05-14T20:28:42
         status: present-in-canonical
         candidate_source_location: null
-        notes: "Step 4b clean per WS-3 Day 3"
+        notes: "Phase 2C paper-number substitution; canonical metadata refreshed"
       - filename: notebooks/06_sensitivity_primary_results.ipynb
         canonical_path: notebooks/06_sensitivity_primary_results.ipynb
         source_location: inputs-direct
-        canonical_sha256: 96bf654ad6fe58abd6e179f6352903ae7aaa251a166f7e88614da76d7137be22
-        size_bytes: 27297
-        last_known_modified: 2026-05-03T18:32:33
+        canonical_sha256: 530da7d00e3f82006888c5e332fe6df6baaef1d3656524d38cfbdd72e7ebd515
+        size_bytes: 26811
+        last_known_modified: 2026-05-14T20:28:42
         status: present-in-canonical
         candidate_source_location: null
-        notes: "Step 4b clean per WS-3 Day 3"
+        notes: "Phase 2C paper-number substitution; canonical metadata refreshed"
       - filename: notebooks/07_sensitivity_robustness_checks.ipynb
         canonical_path: notebooks/07_sensitivity_robustness_checks.ipynb
         source_location: inputs-direct
-        canonical_sha256: 22eb15352fe2259645a6b2083a9a2ae457eee2eda8d61037830fe1fb1ea31a5f
-        size_bytes: 26122
-        last_known_modified: 2026-05-03T18:32:36
+        canonical_sha256: ced1e049614defa5036647754f84fac6032d51122ea297646a2dd908b18a4641
+        size_bytes: 25681
+        last_known_modified: 2026-05-14T20:28:42
         status: present-in-canonical
         candidate_source_location: null
-        notes: "Step 4b clean per WS-3 Day 3"
+        notes: "Phase 2C paper-number substitution; canonical metadata refreshed"
       - filename: notebooks/08_sensitivity_discussion_and_implications.ipynb
         canonical_path: notebooks/08_sensitivity_discussion_and_implications.ipynb
         source_location: inputs-direct
-        canonical_sha256: f63f7e361ad16aa52f50fab6247ec93828f4b3176cb9434ba7f21363ed52a2fa
-        size_bytes: 19158
-        last_known_modified: 2026-05-03T18:32:41
+        canonical_sha256: e23e9a1f8823c345751d538ec22676626940402bd54c477f7206d0c44bd73417
+        size_bytes: 18908
+        last_known_modified: 2026-05-14T20:28:42
         status: present-in-canonical
         candidate_source_location: null
-        notes: "Step 4b clean per WS-3 Day 3"
+        notes: "Phase 2C paper-number substitution; canonical metadata refreshed"
 
   multimedia:
     structure: not-applicable
@@ -178,4 +178,4 @@ provenance:
     - "WS-AUDIT-DOF Pass 1 P3 audit (closure summary Section 1 row 2 + Section 7 row P3)"
     - "Phase 1 R4 audit"
     - "Live SHA metadata gathered 2026-05-06"
-  last_revision_basis: "Initial deployment authoring per Task 1 STEP 1"
+  last_revision_basis: "Phase 2C notebook paper-number substitutions; notebook canonical hashes refreshed"
