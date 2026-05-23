@@ -1,4 +1,4 @@
-"""Pre-execution checks: verify all data, schema, notebook, and manuscript files exist."""
+"""Pre-execution checks for tracked reproducibility inputs."""
 import json
 from pathlib import Path
 
@@ -43,15 +43,14 @@ def test_notebooks_exist():
         assert (ROOT / "notebooks" / f"{nb}.ipynb").exists(), f"Missing {nb}.ipynb"
 
 
-def test_manuscript_files_exist():
-    """Portfolio inputs contract (attachment_requirements.json paper-3) + local manuscript copies."""
-    inputs = ROOT / "inputs"
-    assert (inputs / "supplementary.pdf").exists(), "Missing inputs/supplementary.pdf"
-    assert (inputs / "manuscript.pdf").exists() or (inputs / "manuscript.docx").exists(), (
-        "Missing inputs/manuscript.pdf or inputs/manuscript.docx"
-    )
-    assert (ROOT / "manuscript" / "Paper3_Manuscript.docx").exists()
-    assert (ROOT / "manuscript" / "Paper3_Supplementary_Materials.docx").exists()
+def test_manuscript_source_tracking_uses_current_paths():
+    """Canonical manuscript binaries are tracked in metadata, not committed."""
+    canonical_path = ROOT / "canonical_documents.yaml"
+    text = canonical_path.read_text(encoding="utf-8")
+    assert "canonical_path: inputs/manuscript.docx" in text
+    assert "canonical_path: inputs/supplementary.docx" in text
+    assert "manuscript/Paper3_Manuscript.docx" not in text
+    assert "manuscript/Paper3_Supplementary_Materials.docx" not in text
 
 
 def test_config_exists():
