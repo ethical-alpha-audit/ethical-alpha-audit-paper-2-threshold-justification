@@ -91,30 +91,30 @@ axes:
       - filename: notebooks/04_release_validation.ipynb
         canonical_path: notebooks/04_release_validation.ipynb
         source_location: inputs-direct
-        canonical_sha256: 4dc432a1d2cd3fa76a5065d5a488b0526d9e21ac39247877fe480fa139741a0b
-        size_bytes: 14685
+        canonical_sha256: 03558cf523d3f0898789a3a8a97417723605161f6b9e61aaadf076675686256e
+        size_bytes: 16204
         last_known_modified: 2026-05-03T18:32:24
         status: present-in-canonical
         candidate_source_location: null
-        notes: "Step 4b clean per WS-3 Day 3"
+        notes: "Critical correctness fix: release validation now checks canonical source tracking rather than gitignored Paper3 manuscript filenames"
       - filename: notebooks/05_sensitivity_setup_and_methodology.ipynb
         canonical_path: notebooks/05_sensitivity_setup_and_methodology.ipynb
         source_location: inputs-direct
-        canonical_sha256: 23de5c4fdd8216487e355964002f93101ad469d505fc9ac92ceebe7ec8e4a9f8
-        size_bytes: 21137
+        canonical_sha256: 5bcd115dc43793ad47732e9b8614d01299a532b6e9aae2e6e7f0b98657328c60
+        size_bytes: 22204
         last_known_modified: 2026-05-03T18:32:30
         status: present-in-canonical
         candidate_source_location: null
-        notes: "Step 4b clean per WS-3 Day 3"
+        notes: "Critical correctness fix: rater-model demonstration uses verify_kappa after default-to-Primary binary collapse"
       - filename: notebooks/06_sensitivity_primary_results.ipynb
         canonical_path: notebooks/06_sensitivity_primary_results.ipynb
         source_location: inputs-direct
-        canonical_sha256: 96bf654ad6fe58abd6e179f6352903ae7aaa251a166f7e88614da76d7137be22
-        size_bytes: 27297
+        canonical_sha256: 8fb290fad29a8f114db9156f99f103142508dc8586e1e14fe4848a5871703125
+        size_bytes: 28612
         last_known_modified: 2026-05-03T18:32:33
         status: present-in-canonical
         candidate_source_location: null
-        notes: "Step 4b clean per WS-3 Day 3"
+        notes: "Critical correctness fix: burden prose states 50.0 minutes per misclassified threshold before conversion to hours"
       - filename: notebooks/07_sensitivity_robustness_checks.ipynb
         canonical_path: notebooks/07_sensitivity_robustness_checks.ipynb
         source_location: inputs-direct
