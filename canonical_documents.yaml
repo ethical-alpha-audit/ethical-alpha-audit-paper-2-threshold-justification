@@ -64,35 +64,35 @@ axes:
       - filename: notebooks/01_tjs_framework_and_failure_mechanisms.ipynb
         canonical_path: notebooks/01_tjs_framework_and_failure_mechanisms.ipynb
         source_location: inputs-direct
-        canonical_sha256: 930beb9699606be46e7630155a9e2d5920c459e72fdc83ac629f071b024f6336
-        size_bytes: 23544
+        canonical_sha256: 7223de93a9f6a6b5a263ca16817539c51e245ca647f2aba40bba8bd90edb6bab
+        size_bytes: 23023
         last_known_modified: 2026-05-03T19:36:56
         status: present-in-canonical
         candidate_source_location: null
-        notes: "Step 4b clean per WS-3 Day 3"
+        notes: "Re-executed during critical-correctness validation after release-check fixes"
       - filename: notebooks/02_framework_comparison_and_mappings.ipynb
         canonical_path: notebooks/02_framework_comparison_and_mappings.ipynb
         source_location: inputs-direct
-        canonical_sha256: 4883790fd0e71b2d43cbf3daa1cbd97f27b31116d09b268c17ba1d68c639d731
-        size_bytes: 35843
+        canonical_sha256: 2973e186e20045ace5e60d89c3587f0c62c4b3d79f8b2652965453a246c8dab1
+        size_bytes: 35034
         last_known_modified: 2026-05-03T19:36:56
         status: present-in-canonical
         candidate_source_location: null
-        notes: "Step 4b clean per WS-3 Day 3"
+        notes: "Re-executed during critical-correctness validation after release-check fixes"
       - filename: notebooks/03_tjs_record_schema_demonstration.ipynb
         canonical_path: notebooks/03_tjs_record_schema_demonstration.ipynb
         source_location: inputs-direct
-        canonical_sha256: af435659b3237fb1645135bd5766ba83648aa3c230cb879b286117aeb0638ecb
-        size_bytes: 21344
+        canonical_sha256: 3e5cc899619afaee1693653f2d198eba26f1b8bfccdd6feff1784567ea95f43d
+        size_bytes: 20823
         last_known_modified: 2026-05-03T19:36:56
         status: present-in-canonical
         candidate_source_location: null
-        notes: "Step 4b clean per WS-3 Day 3"
+        notes: "Re-executed during critical-correctness validation after release-check fixes"
       - filename: notebooks/04_release_validation.ipynb
         canonical_path: notebooks/04_release_validation.ipynb
         source_location: inputs-direct
-        canonical_sha256: 03558cf523d3f0898789a3a8a97417723605161f6b9e61aaadf076675686256e
-        size_bytes: 16204
+        canonical_sha256: 8a3ca4dfb5fd51c9fba6d3d636405b3400f1da3fe91da77ab580a2accac4db43
+        size_bytes: 14759
         last_known_modified: 2026-05-03T18:32:24
         status: present-in-canonical
         candidate_source_location: null
@@ -100,8 +100,8 @@ axes:
       - filename: notebooks/05_sensitivity_setup_and_methodology.ipynb
         canonical_path: notebooks/05_sensitivity_setup_and_methodology.ipynb
         source_location: inputs-direct
-        canonical_sha256: 5bcd115dc43793ad47732e9b8614d01299a532b6e9aae2e6e7f0b98657328c60
-        size_bytes: 22204
+        canonical_sha256: 9414d3f7cc9953f59c7703438c31633f20cb410f67bfb395cdd4f06a7757ffaf
+        size_bytes: 20483
         last_known_modified: 2026-05-03T18:32:30
         status: present-in-canonical
         candidate_source_location: null
@@ -109,8 +109,8 @@ axes:
       - filename: notebooks/06_sensitivity_primary_results.ipynb
         canonical_path: notebooks/06_sensitivity_primary_results.ipynb
         source_location: inputs-direct
-        canonical_sha256: 8fb290fad29a8f114db9156f99f103142508dc8586e1e14fe4848a5871703125
-        size_bytes: 28612
+        canonical_sha256: 761b9486702ec2b5a3c210102a623f5a4a6f14095c613f940853b19cc7796ea0
+        size_bytes: 26694
         last_known_modified: 2026-05-03T18:32:33
         status: present-in-canonical
         candidate_source_location: null
@@ -118,21 +118,21 @@ axes:
       - filename: notebooks/07_sensitivity_robustness_checks.ipynb
         canonical_path: notebooks/07_sensitivity_robustness_checks.ipynb
         source_location: inputs-direct
-        canonical_sha256: 22eb15352fe2259645a6b2083a9a2ae457eee2eda8d61037830fe1fb1ea31a5f
-        size_bytes: 26122
+        canonical_sha256: d3d17c977d71832127db7c7701158fb2cd278da4b8edc6f5878378c7efc4798f
+        size_bytes: 25600
         last_known_modified: 2026-05-03T18:32:36
         status: present-in-canonical
         candidate_source_location: null
-        notes: "Step 4b clean per WS-3 Day 3"
+        notes: "Re-executed during critical-correctness validation after release-check fixes"
       - filename: notebooks/08_sensitivity_discussion_and_implications.ipynb
         canonical_path: notebooks/08_sensitivity_discussion_and_implications.ipynb
         source_location: inputs-direct
-        canonical_sha256: f63f7e361ad16aa52f50fab6247ec93828f4b3176cb9434ba7f21363ed52a2fa
-        size_bytes: 19158
+        canonical_sha256: 0f61ef73ae4a5322de49d04d50cc280c5944533bb9b40141ff64c444402d9642
+        size_bytes: 18827
         last_known_modified: 2026-05-03T18:32:41
         status: present-in-canonical
         candidate_source_location: null
-        notes: "Step 4b clean per WS-3 Day 3"
+        notes: "Re-executed during critical-correctness validation after release-check fixes"
 
   multimedia:
     structure: not-applicable
