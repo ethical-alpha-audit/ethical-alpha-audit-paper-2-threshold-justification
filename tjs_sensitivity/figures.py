@@ -33,6 +33,12 @@ TABLES_DIR = REPO_ROOT / "outputs" / "sensitivity" / "tables"
 FIGURES_DIR = REPO_ROOT / "outputs" / "sensitivity" / "figures"
 FIGURES_DIR.mkdir(parents=True, exist_ok=True)
 
+PNG_SAVE_KWARGS = {
+    "dpi": 150,
+    "metadata": {"Software": "Matplotlib"},
+    "pil_kwargs": {"compress_level": 9, "optimize": False},
+}
+
 
 def _read_csv(path: Path) -> list[dict[str, str]]:
     with open(path) as f:
@@ -117,7 +123,7 @@ def figure_main(main_csv: Path, out_path: Path) -> None:
         ax.set_xlabel("Target κ (Negative Harm Test)", fontsize=9)
 
     fig.tight_layout(rect=(0, 0, 1, 0.94))
-    fig.savefig(out_path, dpi=150)
+    fig.savefig(out_path, **PNG_SAVE_KWARGS)
     plt.close(fig)
 
 
@@ -166,7 +172,7 @@ def figure_supp(full_csv: Path, out_path: Path) -> None:
     ax.grid(True, alpha=0.3)
     ax.legend(fontsize=8, loc="best")
     fig.tight_layout(rect=(0, 0, 1, 0.94))
-    fig.savefig(out_path, dpi=150)
+    fig.savefig(out_path, **PNG_SAVE_KWARGS)
     plt.close(fig)
 
 

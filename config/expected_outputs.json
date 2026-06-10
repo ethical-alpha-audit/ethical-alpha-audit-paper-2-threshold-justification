@@ -202,12 +202,12 @@
     },
     {
       "path": "outputs/sensitivity/figures/figure_main_kappa_outcomes.png",
-      "sha256": "deb5ce0a5c516be6f69263cdb381da3d174a0b52969b7cc3ea9954e79c1fd452",
+      "sha256": "0814266023eb41fff904a3bb3df6f8d387636219cfc5a6ee6391c7c282fb3984",
       "required": true
     },
     {
       "path": "outputs/sensitivity/figures/figure_supp_kappa_pi_grid.png",
-      "sha256": "26335b62e7eac09abc14c8341398296fe4e28904cd669aee8f6b95eb43820562",
+      "sha256": "b55d993484596865ac08b3f44394767947ba16d720573212cd088bd3bca11030",
       "required": true
     }
   ]
