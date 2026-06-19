@@ -30,7 +30,8 @@ def test_validate_hashes_live_file_not_stale_manifest(tmp_path, monkeypatch):
     output = tmp_path / "outputs" / "table.csv"
     output.parent.mkdir()
     expected_bytes = b"expected data\n"
-    output.write_bytes(b"corrupted data\n")
+    corrupted_bytes = b"corrupted data\n"
+    output.write_bytes(corrupted_bytes)
     expected_hash = _sha256(expected_bytes)
     _write_expected(
         tmp_path,
@@ -59,7 +60,7 @@ def test_validate_hashes_live_file_not_stale_manifest(tmp_path, monkeypatch):
     assert failures == [
         (
             "Hash mismatch for outputs/table.csv: "
-            f"expected {expected_hash}, got {_sha256(b'corrupted data\\n')}"
+            f"expected {expected_hash}, got {_sha256(corrupted_bytes)}"
         )
     ]
 
