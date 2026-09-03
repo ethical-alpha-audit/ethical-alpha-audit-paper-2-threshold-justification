@@ -56,9 +56,27 @@ def cohen_kappa_binary(rater_a: np.ndarray, rater_b: np.ndarray) -> float:
     -------
     float : Cohen's κ. Returns 0.0 when chance agreement equals 1.0
             (degenerate case where one class is absent from both raters).
+
+    Raises
+    ------
+    TypeError
+        If either array is not integer-typed. String labels such as
+        ``"Primary"`` / ``"Secondary"`` / ``"Uncertain"`` must be passed
+        through ``verify_kappa``, which applies the default-to-Primary
+        collapse before calling this function. Feeding string labels here
+        makes ``rater == 1`` always false, so chance agreement is 1.0 and
+        the function silently returns 0.0.
     """
     if rater_a.shape != rater_b.shape:
         raise ValueError("rater_a and rater_b must have the same shape")
+    if not (
+        np.issubdtype(rater_a.dtype, np.integer)
+        and np.issubdtype(rater_b.dtype, np.integer)
+    ):
+        raise TypeError(
+            "cohen_kappa_binary expects integer 0/1 arrays; "
+            "call verify_kappa() for Primary/Secondary/Uncertain labels"
+        )
     n = rater_a.size
     if n == 0:
         return 0.0
