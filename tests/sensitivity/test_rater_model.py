@@ -6,7 +6,7 @@ from pathlib import Path
 
 import numpy as np
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
 from tjs_sensitivity.rater_model import (  # noqa: E402
     PRIMARY,
@@ -108,3 +108,44 @@ def test_uncertain_collapses_to_primary_in_kappa() -> None:
     )
     k = verify_kappa(a, b)
     assert -1.0 <= k <= 1.0
+
+
+def test_cohen_kappa_binary_rejects_string_labels() -> None:
+    """String tier labels must not take the integer-κ path.
+
+    Feeding object arrays of 'Primary'/'Secondary' makes ``rater == 1``
+    always false, so chance agreement is 1.0 and the function used to
+    return 0.0 silently (notebook 05 demonstration printed κ=0.000 at
+    target 0.60). Callers with string labels must use verify_kappa.
+    """
+    a = np.array([PRIMARY, SECONDARY, PRIMARY], dtype=object)
+    b = a.copy()
+    try:
+        cohen_kappa_binary(a, b)
+    except TypeError:
+        return
+    raise AssertionError(
+        "cohen_kappa_binary must reject string labels; use verify_kappa"
+    )
+
+
+def test_notebook05_demo_scenario_realised_kappa_near_target() -> None:
+    """Reproduce notebook 05's demonstration stream; realised κ ≈ 0.60."""
+    from tjs_sensitivity.bootstrap import load_seed
+
+    root = Path(__file__).resolve().parents[2]
+    rng = np.random.default_rng(load_seed(root))
+    n = 1000
+    base_rate = 0.10
+    target_kappa = 0.60
+    latent = np.where(rng.random(n) < base_rate, PRIMARY, SECONDARY).astype(object)
+    a, b = simulate_raters(
+        latent_true=latent,
+        target_kappa=target_kappa,
+        base_rate_primary=base_rate,
+        uncertain_prob=0.02,
+        rng=rng,
+    )
+    realised = verify_kappa(a, b)
+    assert abs(realised - target_kappa) < 0.15, f"realised κ = {realised}"
+    assert abs(realised) > 1e-9, f"degenerate realised κ = {realised}"
